@@ -57,7 +57,7 @@ const dismissPopup = () => {
 
       <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6">
         <a
-          href="https://github.com/EbadShelby/syntaxia/issues/new?title=[Feedback]%20"
+          href="https://github.com/EbadShelby/syntaxia-dev/issues/new?title=[Feedback]%20"
           target="_blank"
           rel="noopener noreferrer"
           class="flex items-center gap-1.5 text-neutral-400 hover:text-primary-lightgreen transition-colors"
@@ -79,7 +79,7 @@ const dismissPopup = () => {
           Feedback
         </a>
         <a
-          href="https://github.com/EbadShelby/syntaxia/issues/new?title=[Cheatsheet%20Request]%20"
+          href="https://github.com/EbadShelby/syntaxia-dev/issues/new?title=[Cheatsheet%20Request]%20"
           target="_blank"
           rel="noopener noreferrer"
           class="flex items-center gap-1.5 text-neutral-400 hover:text-primary-lightgreen transition-colors"
@@ -101,7 +101,7 @@ const dismissPopup = () => {
           Request Cheatsheet
         </a>
         <a
-          href="https://github.com/EbadShelby/syntaxia/issues/new?title=[Bug%20Report]%20"
+          href="https://github.com/EbadShelby/syntaxia-dev/issues/new?title=[Bug%20Report]%20"
           target="_blank"
           rel="noopener noreferrer"
           class="flex items-center gap-1.5 text-neutral-400 hover:text-primary-lightgreen transition-colors"
@@ -161,7 +161,7 @@ const dismissPopup = () => {
         </div>
 
         <a
-          href="https://github.com/EbadShelby/syntaxia/issues/new?title=[Cheatsheet%20Request]%20"
+          href="https://github.com/EbadShelby/syntaxia-dev/issues/new?title=[Cheatsheet%20Request]%20"
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center justify-center gap-2 px-4 py-2 mt-1 bg-primary-green hover:bg-primary-green/90 text-neutral-black text-xs font-bold rounded transition-colors"

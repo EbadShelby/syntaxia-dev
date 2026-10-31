@@ -432,7 +432,7 @@ const scrollRight = () => {
           <SearchBar />
 
           <a
-            href="https://github.com/EbadShelby/syntaxia"
+            href="https://github.com/EbadShelby/syntaxia-dev"
             target="_blank"
             rel="noopener noreferrer"
             class="flex items-center gap-1.5 px-2.5 py-1 text-xs font-base text-neutral-400 hover:text-white border border-neutral-gray rounded-md hover:border-neutral-500 transition-colors bg-neutral-black"
