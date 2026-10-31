@@ -75,6 +75,7 @@ async function highlight() {
   // map databases to sql
   let lang = ['mysql', 'postgresql', 'postgres'].includes(langRaw) ? 'sql' : langRaw
   if (lang === 'c++') lang = 'cpp'
+  if (lang === 'cmd') lang = 'shell'
   const supported = [
     'html',
     'css',

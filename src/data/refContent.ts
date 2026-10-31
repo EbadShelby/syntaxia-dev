@@ -7831,7 +7831,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM Command Prompt\ncd                                                     REM Print current directory\ndir                                                    REM List files/folders\ndir /a                                                 REM Include hidden files\ndir /s                                                 REM List recursively (subfolders)\ndir /w                                                 REM Wide format (columns)\n\ncd folder                                              REM Change directory\ncd ..                                                  REM Go up one level\ncd \\                                                   REM Go to root of current drive\ncd %USERPROFILE%                                       REM Go to home directory\nC:                                                     REM Switch to C: drive\nD:                                                     REM Switch to D: drive',
+            code: '# Command Prompt\ncd                                                     # Print current directory\ndir                                                    # List files/folders\ndir /a                                                 # Include hidden files\ndir /s                                                 # List recursively (subfolders)\ndir /w                                                 # Wide format (columns)\n\ncd folder                                              # Change directory\ncd ..                                                  # Go up one level\ncd \\                                                   # Go to root of current drive\ncd %USERPROFILE%                                       # Go to home directory\nC:                                                     # Switch to C: drive\nD:                                                     # Switch to D: drive',
           },
           {
             language: 'powershell',
@@ -7846,7 +7846,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM Command Prompt\ntype nul > file.txt                                    REM Create empty file\nmkdir folder                                           REM Create directory\nmkdir a\\b\\c                                            REM Create nested directories\n\ncopy file.txt copy.txt                                 REM Copy file\nxcopy folder newfolder /E /I                           REM Copy directory recursively\nrobocopy folder newfolder /E                           REM Modern, more robust copy tool\n\nmove file.txt newname.txt                              REM Rename file\nmove file.txt folder\\                                  REM Move file into folder\n\ndel file.txt                                           REM Delete file\nrmdir /s folder                                        REM Delete directory recursively\nrmdir /s /q folder                                     REM Delete without confirmation\nrmdir folder                                           REM Delete empty directory\n\nren oldname.txt newname.txt                            REM Rename file/folder',
+            code: '# Command Prompt\ntype nul > file.txt                                    # Create empty file\nmkdir folder                                           # Create directory\nmkdir a\\b\\c                                            # Create nested directories\n\ncopy file.txt copy.txt                                 # Copy file\nxcopy folder newfolder /E /I                           # Copy directory recursively\nrobocopy folder newfolder /E                           # Modern, more robust copy tool\n\nmove file.txt newname.txt                              # Rename file\nmove file.txt folder\\                                  # Move file into folder\n\ndel file.txt                                           # Delete file\nrmdir /s folder                                        # Delete directory recursively\nrmdir /s /q folder                                     # Delete without confirmation\nrmdir folder                                           # Delete empty directory\n\nren oldname.txt newname.txt                            # Rename file/folder',
           },
           {
             language: 'powershell',
@@ -7861,7 +7861,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM Command Prompt\ntype file.txt                                          REM Print entire file\nmore file.txt                                          REM View page by page (space to continue, q to quit)\n\nREM First/last lines (no native head/tail, use PowerShell instead)',
+            code: '# Command Prompt\ntype file.txt                                          # Print entire file\nmore file.txt                                          # View page by page (space to continue, q to quit)\n\n# First/last lines (no native head/tail, use PowerShell instead)',
           },
           {
             language: 'powershell',
@@ -7876,7 +7876,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM Command Prompt\ndir /s /b *.txt                                        REM Find files by name (recursive, bare format)\nwhere python                                           REM Find command location (like \'which\')\n\nfindstr "search" file.txt                              REM Search for text in file\nfindstr /i "search" file.txt                           REM Case-insensitive search\nfindstr /s /i "search" *.txt                           REM Recursive search in matching files\nfindstr /n "search" file.txt                           REM Show line numbers\nfindstr /v "search" file.txt                           REM Invert match\nfindstr /c:"exact phrase" file.txt                     REM Search exact phrase',
+            code: '# Command Prompt\ndir /s /b *.txt                                        # Find files by name (recursive, bare format)\nwhere python                                           # Find command location (like \'which\')\n\nfindstr "search" file.txt                              # Search for text in file\nfindstr /i "search" file.txt                           # Case-insensitive search\nfindstr /s /i "search" *.txt                           # Recursive search in matching files\nfindstr /n "search" file.txt                           # Show line numbers\nfindstr /v "search" file.txt                           # Invert match\nfindstr /c:"exact phrase" file.txt                     # Search exact phrase',
           },
           {
             language: 'powershell',
@@ -7891,7 +7891,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: "REM Command Prompt\nattrib file.txt                                        REM Show file attributes\nattrib +r file.txt                                     REM Make file read-only\nattrib -r file.txt                                     REM Remove read-only\nattrib +h file.txt                                     REM Hide file\nattrib -h file.txt                                     REM Unhide file\n\nicacls file.txt                                        REM Show permissions (ACLs)\nicacls file.txt /grant user:F                          REM Grant full control to user\nicacls file.txt /remove user                           REM Remove user's permissions\n\ntakeown /f file.txt                                    REM Take ownership of file",
+            code: "# Command Prompt\nattrib file.txt                                        # Show file attributes\nattrib +r file.txt                                     # Make file read-only\nattrib -r file.txt                                     # Remove read-only\nattrib +h file.txt                                     # Hide file\nattrib -h file.txt                                     # Unhide file\n\nicacls file.txt                                        # Show permissions (ACLs)\nicacls file.txt /grant user:F                          # Grant full control to user\nicacls file.txt /remove user                           # Remove user's permissions\n\ntakeown /f file.txt                                    # Take ownership of file",
           },
           {
             language: 'powershell',
@@ -7906,7 +7906,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM Command Prompt\ntasklist                                               REM List running processes\ntasklist | findstr node                                REM Find specific process\n\ntaskkill /PID 1234                                     REM Kill process by ID\ntaskkill /IM notepad.exe                               REM Kill process by name\ntaskkill /F /IM chrome.exe                             REM Force kill by name\n\nstart program.exe                                      REM Start a program\nstart /B command                                       REM Run in background',
+            code: '# Command Prompt\ntasklist                                               # List running processes\ntasklist | findstr node                                # Find specific process\n\ntaskkill /PID 1234                                     # Kill process by ID\ntaskkill /IM notepad.exe                               # Kill process by name\ntaskkill /F /IM chrome.exe                             # Force kill by name\n\nstart program.exe                                      # Start a program\nstart /B command                                       # Run in background',
           },
           {
             language: 'powershell',
@@ -7921,7 +7921,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM Command Prompt\nwmic logicaldisk get size,freespace,caption            REM Disk space info\ndir                                                    REM Shows free space at bottom\n\nsysteminfo                                             REM Full system info\nver                                                    REM Windows version\nhostname                                               REM Machine name\nwhoami                                                 REM Current user\necho %USERNAME%                                        REM Current username (variable)\n\nwmic cpu get name                                      REM CPU info\nwmic memorychip get capacity                           REM Memory info',
+            code: '# Command Prompt\nwmic logicaldisk get size,freespace,caption            # Disk space info\ndir                                                    # Shows free space at bottom\n\nsysteminfo                                             # Full system info\nver                                                    # Windows version\nhostname                                               # Machine name\nwhoami                                                 # Current user\necho %USERNAME%                                        # Current username (variable)\n\nwmic cpu get name                                      # CPU info\nwmic memorychip get capacity                           # Memory info',
           },
           {
             language: 'powershell',
@@ -7936,7 +7936,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: "REM Command Prompt (works in both)\nping google.com                                        REM Test connectivity\nping -n 4 google.com                                   REM Ping 4 times then stop\n\nipconfig                                               REM Network interfaces\nipconfig /all                                          REM Detailed network info\nipconfig /flushdns                                     REM Clear DNS cache\nipconfig /release                                      REM Release IP (then /renew)\nipconfig /renew                                        REM Renew IP address\n\nnetstat -an                                            REM Show all connections/ports\nnetstat -ano | findstr :8080                           REM Check what's using port 8080\n\nnslookup example.com                                   REM DNS lookup\ntracert example.com                                    REM Trace route to host\n\ncurl https://example.com                               REM Make HTTP request (built-in Windows 10+)\n\nREM SSH (built into modern Windows)\nssh user@hostname\nscp file.txt user@host:/path/",
+            code: "# Command Prompt (works in both)\nping google.com                                        # Test connectivity\nping -n 4 google.com                                   # Ping 4 times then stop\n\nipconfig                                               # Network interfaces\nipconfig /all                                          # Detailed network info\nipconfig /flushdns                                     # Clear DNS cache\nipconfig /release                                      # Release IP (then /renew)\nipconfig /renew                                        # Renew IP address\n\nnetstat -an                                            # Show all connections/ports\nnetstat -ano | findstr :8080                           # Check what's using port 8080\n\nnslookup example.com                                   # DNS lookup\ntracert example.com                                    # Trace route to host\n\ncurl https://example.com                               # Make HTTP request (built-in Windows 10+)\n\n# SSH (built into modern Windows)\nssh user@hostname\nscp file.txt user@host:/path/",
           },
           {
             language: 'powershell',
@@ -7951,7 +7951,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM Command Prompt (uses built-in tar, Windows 10+)\ntar -cvf archive.tar folder\\                           REM Create archive\ntar -xvf archive.tar                                   REM Extract archive\ntar -czvf archive.tar.gz folder\\                       REM Create compressed archive\ntar -xzvf archive.tar.gz                               REM Extract .tar.gz',
+            code: '# Command Prompt (uses built-in tar, Windows 10+)\ntar -cvf archive.tar folder\\\                           # Create archive\ntar -xvf archive.tar                                   # Extract archive\ntar -czvf archive.tar.gz folder\\\                       # Create compressed archive\ntar -xzvf archive.tar.gz                               # Extract .tar.gz',
           },
           {
             language: 'powershell',
@@ -7966,7 +7966,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM winget (built into Windows 10/11)\nwinget search packagename\nwinget install packagename\nwinget uninstall packagename\nwinget upgrade                                         REM List upgradable packages\nwinget upgrade --all                                   REM Upgrade everything\nwinget list                                            REM List installed packages',
+            code: '# winget (built into Windows 10/11)\nwinget search packagename\nwinget install packagename\nwinget uninstall packagename\nwinget upgrade                                         # List upgradable packages\nwinget upgrade --all                                   # Upgrade everything\nwinget list                                            # List installed packages',
           },
           {
             language: 'powershell',
@@ -7981,7 +7981,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM Command Prompt\necho %PATH%                                            REM Print a variable\nset VAR_NAME=value                                     REM Set variable for current session\nset                                                    REM List all environment variables\n\nREM Permanent (system-wide, requires admin)\nsetx VAR_NAME "value"\nsetx VAR_NAME "value" /M                               REM Set for all users (machine level)',
+            code: '# Command Prompt\necho %PATH%                                            # Print a variable\nset VAR_NAME=value                                     # Set variable for current session\nset                                                    # List all environment variables\n\n# Permanent (system-wide, requires admin)\nsetx VAR_NAME "value"\nsetx VAR_NAME "value" /M                               # Set for all users (machine level)',
           },
           {
             language: 'powershell',
@@ -7996,7 +7996,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM Command Prompt\ncommand > file.txt                                     REM Redirect output to file (overwrite)\ncommand >> file.txt                                    REM Redirect output to file (append)\ncommand < file.txt                                     REM Use file as input\ncommand 2> error.txt                                   REM Redirect errors only\ncommand > out.txt 2>&1                                 REM Redirect both output and errors\n\ncommand1 | command2                                    REM Pipe output of command1 into command2\ntype file.txt | findstr "search"                       REM Chain commands\n\ncommand > nul                                          REM Discard output',
+            code: '# Command Prompt\ncommand > file.txt                                     # Redirect output to file (overwrite)\ncommand >> file.txt                                    # Redirect output to file (append)\ncommand < file.txt                                     # Use file as input\ncommand 2> error.txt                                   # Redirect errors only\ncommand > out.txt 2>&1                                 # Redirect both output and errors\n\ncommand1 | command2                                    # Pipe output of command1 into command2\ntype file.txt | findstr "search"                       # Chain commands\n\ncommand > nul                                          # Discard output',
           },
           {
             language: 'powershell',
@@ -8011,7 +8011,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM Command Prompt (limited native tools)\nsort file.txt                                          REM Sort lines alphabetically\nsort /R file.txt                                       REM Reverse order\n\nfc file1.txt file2.txt                                 REM Compare files (like diff)\n\nfind "search" file.txt                                 REM Simple text search (older tool)',
+            code: '# Command Prompt (limited native tools)\nsort file.txt                                          # Sort lines alphabetically\nsort /R file.txt                                       # Reverse order\n\nfc file1.txt file2.txt                                 # Compare files (like diff)\n\nfind "search" file.txt                                 # Simple text search (older tool)',
           },
           {
             language: 'powershell',
@@ -8026,7 +8026,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM Command Prompt\nnotepad file.txt                                       REM Open in Notepad\nedit file.txt                                          REM Open in old MS-DOS Editor (if available)',
+            code: '# Command Prompt\nnotepad file.txt                                       # Open in Notepad\nedit file.txt                                          # Open in old MS-DOS Editor (if available)',
           },
           {
             language: 'powershell',
@@ -8041,7 +8041,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: 'REM Command Prompt\nnet start                                              REM List running services\nnet start "Service Name"                               REM Start a service\nnet stop "Service Name"                                REM Stop a service\n\nsc query "ServiceName"                                 REM Query service status\nsc start "ServiceName"                                 REM Start service\nsc stop "ServiceName"                                  REM Stop service\nsc config "ServiceName" start=auto                     REM Set to start automatically',
+            code: '# Command Prompt\nnet start                                              # List running services\nnet start "Service Name"                               # Start a service\nnet stop "Service Name"                                # Stop a service\n\nsc query "ServiceName"                                 # Query service status\nsc start "ServiceName"                                 # Start service\nsc stop "ServiceName"                                  # Stop service\nsc config "ServiceName" start=auto                     # Set to start automatically',
           },
           {
             language: 'powershell',
@@ -8056,7 +8056,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: "REM Command Prompt\nnet user                                               REM List all users\nnet user username                                      REM Show user details\nnet user username password                             REM Create user with password\nnet user username /delete                              REM Delete user\n\nnet localgroup administrators                          REM List admin group members\nnet localgroup administrators username /add            REM Add user to admin group\n\nwhoami /groups                                         REM Show current user's groups",
+            code: "# Command Prompt\nnet user                                               # List all users\nnet user username                                      # Show user details\nnet user username password                             # Create user with password\nnet user username /delete                              # Delete user\n\nnet localgroup administrators                          # List admin group members\nnet localgroup administrators username /add            # Add user to admin group\n\nwhoami /groups                                         # Show current user's groups",
           },
           {
             language: 'powershell',
@@ -8082,7 +8082,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'cmd',
-            code: "REM Command Prompt\nREM Find and delete files matching pattern\ndel /s *.log\n\nREM Check what's using a port\nnetstat -ano | findstr :8080\n\nREM Run command and log output\ncommand > output.log 2>&1\n\nREM Chain commands: run second only if first succeeds\ncommand1 && command2\n\nREM Chain commands: run second regardless\ncommand1 & command2\n\nREM Check exit code of last command\necho %ERRORLEVEL%",
+            code: "# Command Prompt\n# Find and delete files matching pattern\ndel /s *.log\n\n# Check what's using a port\nnetstat -ano | findstr :8080\n\n# Run command and log output\ncommand > output.log 2>&1\n\n# Chain commands: run second only if first succeeds\ncommand1 && command2\n\n# Chain commands: run second regardless\ncommand1 & command2\n\n# Check exit code of last command\necho %ERRORLEVEL%",
           },
           {
             language: 'powershell',
