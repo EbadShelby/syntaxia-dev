@@ -6,6 +6,8 @@
 
 A sleek, centralized cheatsheet for programming languages, libraries, and frameworks built with **Vue 3**, **Tailwind CSS**, and **Shiki**.
 
+> **Syntaxia Demo Preview**
+
 ![Syntaxia — look up the command you forgot and copy it in seconds](https://github.com/yasirwhite/OpenDemo/releases/download/showcase-media/syntaxia-demo.gif)
 
 ## Quick Start
