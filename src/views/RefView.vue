@@ -7,12 +7,17 @@ import AppSidebar from '@/components/AppSidebar.vue'
 import CodeBlock from '@/components/CodeBlock.vue'
 import AppFooter from '@/components/AppFooter.vue'
 import { smoothScrollTo } from '@/utils/scroll'
+import { useNewCheatsheets } from '@/utils/newCheatsheets'
 
 const route = useRoute()
 const router = useRouter()
 
 const lang = computed(() => route.params.lang as string)
 const topic = computed(() => refTopics[lang.value])
+
+// Opening a cheatsheet clears its "New" mark (covers direct visits and search)
+const { markSeen } = useNewCheatsheets()
+watch(lang, (l) => l && markSeen(l), { immediate: true })
 
 // If lang not found, redirect home
 watch(

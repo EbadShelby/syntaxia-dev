@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import SearchBar from '@/components/SearchBar.vue'
 import AppFooter from '@/components/AppFooter.vue'
+import { useNewCheatsheets } from '@/utils/newCheatsheets'
 
 const languages = [
   {
@@ -416,29 +417,8 @@ const filteredLanguages = computed(() => {
 })
 
 // ─── Announcement ───────────────────────────────
-// To announce new cheatsheets: update `newLangs` and bump `announcementId`
-// (bumping re-shows the banner for users who dismissed the previous one).
-const newLangs = ['yaml', 'bash', 'vim']
-const announcementId = 'new-cheatsheets-2026-11'
-const storageKey = `syntaxia:dismissed:${announcementId}`
-
-const showAnnouncement = ref(false)
-try {
-  showAnnouncement.value = localStorage.getItem(storageKey) !== '1'
-} catch {
-  showAnnouncement.value = true
-}
-
-const newItems = languages.filter((l) => newLangs.includes(l.lang))
-
-const dismissAnnouncement = () => {
-  showAnnouncement.value = false
-  try {
-    localStorage.setItem(storageKey, '1')
-  } catch {
-    /* storage unavailable; dismissal lasts for this session only */
-  }
-}
+const { isNew, showAnnouncement, markSeen, dismissAnnouncement } = useNewCheatsheets()
+const newItems = computed(() => languages.filter((l) => isNew(l.lang)))
 
 const scrollContainer = ref<HTMLElement | null>(null)
 
@@ -479,6 +459,7 @@ const scrollRight = () => {
             v-for="item in newItems"
             :key="item.lang"
             :to="`/ref/${item.lang}`"
+            @click="markSeen(item.lang)"
             class="font-semibold text-white underline decoration-primary-lightgreen underline-offset-4 hover:text-primary-lightgreen transition-colors"
           >
             {{ item.label }}
@@ -681,6 +662,7 @@ const scrollRight = () => {
           v-for="item in filteredLanguages"
           :key="item.lang"
           :to="`/ref/${item.lang}`"
+          @click="markSeen(item.lang)"
           class="group relative rounded-xl p-3 sm:p-4 bg-neutral-gray/10 border border-neutral-gray block overflow-hidden"
           :style="{ '--theme-color': item.color }"
         >
@@ -690,7 +672,7 @@ const scrollRight = () => {
           ></div>
 
           <span
-            v-if="newLangs.includes(item.lang)"
+            v-if="isNew(item.lang)"
             class="absolute top-2 right-2 z-20 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-widest rounded-full bg-primary-lightgreen text-white"
           >
             New
