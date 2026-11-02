@@ -349,7 +349,9 @@ async function copy() {
 /* Neutralise the global .line border utility — Shiki uses this class for each line span */
 .shiki-wrapper :deep(.line) {
   border: none;
-  display: block; /* stretch to full pre width so per-line copy button anchors to the right edge */
+  /* inline-block (not block): Shiki emits "\n" between line spans, and block would double the line spacing */
+  display: inline-block;
+  min-width: 100%; /* stretch to full pre width so per-line copy button anchors to the right edge */
 }
 
 .shiki-wrapper :deep(.line:hover) {
