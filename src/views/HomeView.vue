@@ -415,6 +415,31 @@ const filteredLanguages = computed(() => {
   return languages.filter((l) => l.badge === selectedCategory.value)
 })
 
+// ─── Announcement ───────────────────────────────
+// To announce new cheatsheets: update `newLangs` and bump `announcementId`
+// (bumping re-shows the banner for users who dismissed the previous one).
+const newLangs = ['yaml', 'bash', 'vim']
+const announcementId = 'new-cheatsheets-2026-11'
+const storageKey = `syntaxia:dismissed:${announcementId}`
+
+const showAnnouncement = ref(false)
+try {
+  showAnnouncement.value = localStorage.getItem(storageKey) !== '1'
+} catch {
+  showAnnouncement.value = true
+}
+
+const newItems = languages.filter((l) => newLangs.includes(l.lang))
+
+const dismissAnnouncement = () => {
+  showAnnouncement.value = false
+  try {
+    localStorage.setItem(storageKey, '1')
+  } catch {
+    /* storage unavailable; dismissal lasts for this session only */
+  }
+}
+
 const scrollContainer = ref<HTMLElement | null>(null)
 
 const scrollLeft = () => {
@@ -434,6 +459,50 @@ const scrollRight = () => {
 
 <template>
   <div class="min-h-screen bg-neutral-black text-white">
+    <!-- ─── Announcement ─────────────────────────────────── -->
+    <div
+      v-if="showAnnouncement"
+      role="status"
+      class="relative border-b border-primary-lightgreen/40 bg-primary-green/30 text-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 py-2.5 pr-12 flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5"
+      >
+        <span
+          class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded-full bg-primary-lightgreen text-white"
+        >
+          New
+        </span>
+        <span class="text-neutral-200">New cheatsheets just landed:</span>
+        <span class="flex items-center gap-2">
+          <RouterLink
+            v-for="item in newItems"
+            :key="item.lang"
+            :to="`/ref/${item.lang}`"
+            class="font-semibold text-white underline decoration-primary-lightgreen underline-offset-4 hover:text-primary-lightgreen transition-colors"
+          >
+            {{ item.label }}
+          </RouterLink>
+        </span>
+      </div>
+      <button
+        @click="dismissAnnouncement"
+        aria-label="Dismiss announcement"
+        class="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 text-neutral-400 hover:text-white transition-colors cursor-pointer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          class="w-4 h-4"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
     <!-- ─── Nav ─────────────────────────────────────────── -->
     <header
       class="sticky top-0 z-50 border-b border-neutral-gray bg-neutral-black/80 backdrop-blur-md"
@@ -620,6 +689,12 @@ const scrollRight = () => {
             :style="{ borderColor: 'var(--theme-color)' }"
           ></div>
 
+          <span
+            v-if="newLangs.includes(item.lang)"
+            class="absolute top-2 right-2 z-20 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-widest rounded-full bg-primary-lightgreen text-white"
+          >
+            New
+          </span>
           <div class="relative z-10 flex items-center gap-3 sm:gap-4 h-full">
             <div
               class="w-10 h-10 sm:w-12 sm:h-12 shrink-0 flex items-center justify-center rounded-xl bg-neutral-black border border-neutral-gray/50 transition-colors duration-300 group-hover:border-(--theme-color) shadow-md relative"
