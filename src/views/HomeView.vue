@@ -365,6 +365,14 @@ const languages = [
     badge: 'Library',
     desc: 'High power tools for HTML.',
   },
+  {
+    lang: 'yaml',
+    label: 'YAML',
+    icon: '/yaml.svg',
+    color: '#CB171E',
+    badge: 'Language',
+    desc: 'Human-friendly data serialization format used for configuration files.',
+  },
 ]
 
 const categoryCounts = languages.reduce(
