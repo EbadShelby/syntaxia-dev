@@ -373,6 +373,22 @@ const languages = [
     badge: 'Language',
     desc: 'Human-friendly data serialization format used for configuration files.',
   },
+  {
+    lang: 'bash',
+    label: 'Bash',
+    icon: '/bash_dark.svg',
+    color: '#4EAA25',
+    badge: 'Language',
+    desc: 'Unix shell and command language for scripting and automation.',
+  },
+  {
+    lang: 'vim',
+    label: 'Vim',
+    icon: '/vim.svg',
+    color: '#019733',
+    badge: 'Tool',
+    desc: 'Powerful, keyboard-driven modal text editor.',
+  },
 ]
 
 const categoryCounts = languages.reduce(

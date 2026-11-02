@@ -346,7 +346,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: '// let (block-scoped, can change)\nlet age = 25\nage = 26\n\n// const (block-scoped, cannot be reassigned)\nconst name = \'John\'\n\n// var (function-scoped, avoid using)\nvar oldWay = \'legacy\'\n\n// Multiple declarations\nlet a = 1,\n  b = 2,\n  c = 3\n\n// Check type\ntypeof age // "number"\ntypeof name // "string"',
+            code: '// let (block-scoped, can change)\nlet age = 25\nage = 26\n\n// const (block-scoped, cannot be reassigned)\nconst name = \'John\'\n\n// var (function-scoped, avoid using)\nvar oldWay = \'legacy\'\n\n// Multiple declarations\nlet a = 1,\n  b = 2,\n  c = 3\n\n// Check type\ntypeof age  // "number"\ntypeof name // "string"',
           },
         ],
       },
@@ -357,7 +357,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// Primitives\nlet text = 'Hello World' // String\nlet num = 42 // Number\nlet decimal = 3.14\nlet big = 123456789012345678901234n // BigInt\nlet isActive = true // Boolean\nlet empty = null // Null\nlet notDefined // Undefined\nlet sym = Symbol('id') // Symbol\n\n// Reference types\nlet fruits = ['apple', 'banana'] // Array\nlet person = { name: 'John', age: 30 } // Object\nlet greet = function () {} // Function\n\n// Type checking\ntypeof 'hello' // \"string\"\ntypeof 42 // \"number\"\ntypeof true // \"boolean\"\ntypeof undefined // \"undefined\"\ntypeof null // \"object\" (known quirk)\ntypeof [] // \"object\"\ntypeof {} // \"object\"\nArray.isArray([]) // true\n\n// Type conversion\nString(42) // \"42\"\nNumber('42') // 42\nBoolean(1) // true\nparseInt('42px') // 42\nparseFloat('3.14m') // 3.14",
+            code: "// Primitives\nlet text = 'Hello World' // String\nlet num = 42             // Number\nlet decimal = 3.14\nlet big = 123456789012345678901234n // BigInt\nlet isActive = true                 // Boolean\nlet empty = null                    // Null\nlet notDefined                      // Undefined\nlet sym = Symbol('id')              // Symbol\n\n// Reference types\nlet fruits = ['apple', 'banana']       // Array\nlet person = { name: 'John', age: 30 } // Object\nlet greet = function () {}             // Function\n\n// Type checking\ntypeof 'hello'    // \"string\"\ntypeof 42         // \"number\"\ntypeof true       // \"boolean\"\ntypeof undefined  // \"undefined\"\ntypeof null       // \"object\" (known quirk)\ntypeof []         // \"object\"\ntypeof {}         // \"object\"\nArray.isArray([]) // true\n\n// Type conversion\nString(42)          // \"42\"\nNumber('42')        // 42\nBoolean(1)          // true\nparseInt('42px')    // 42\nparseFloat('3.14m') // 3.14",
           },
         ],
       },
@@ -368,7 +368,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "let text = 'Hello World'\n\n// Properties and methods\ntext.length // 11\ntext.toUpperCase() // \"HELLO WORLD\"\ntext.toLowerCase() // \"hello world\"\ntext.trim() // Remove whitespace\ntext.includes('World') // true\ntext.startsWith('Hello') // true\ntext.endsWith('World') // true\ntext.indexOf('World') // 6\ntext.slice(0, 5) // \"Hello\"\ntext.substring(6, 11) // \"World\"\ntext.replace('World', 'JS') // \"Hello JS\"\ntext.replaceAll('o', '0') // Replace all\ntext.split(' ') // [\"Hello\", \"World\"]\ntext.repeat(2) // \"Hello WorldHello World\"\ntext.padStart(15, '*') // Pad start\ntext.padEnd(15, '*') // Pad end\ntext.charAt(0) // \"H\"\ntext.at(-1) // \"d\" (last char)\n\n// Template literals\nlet name = 'John'\nlet greeting = `Hello, ${name}!`\nlet multi = `Line 1\nLine 2`\n\n// Tagged templates\nfunction tag(strings, ...values) {\n  return strings.raw.join('') + values.join(',')\n}",
+            code: "let text = 'Hello World'\n\n// Properties and methods\ntext.length                 // 11\ntext.toUpperCase()          // \"HELLO WORLD\"\ntext.toLowerCase()          // \"hello world\"\ntext.trim()                 // Remove whitespace\ntext.includes('World')      // true\ntext.startsWith('Hello')    // true\ntext.endsWith('World')      // true\ntext.indexOf('World')       // 6\ntext.slice(0, 5)            // \"Hello\"\ntext.substring(6, 11)       // \"World\"\ntext.replace('World', 'JS') // \"Hello JS\"\ntext.replaceAll('o', '0')   // Replace all\ntext.split(' ')             // [\"Hello\", \"World\"]\ntext.repeat(2)              // \"Hello WorldHello World\"\ntext.padStart(15, '*')      // Pad start\ntext.padEnd(15, '*')        // Pad end\ntext.charAt(0)              // \"H\"\ntext.at(-1)                 // \"d\" (last char)\n\n// Template literals\nlet name = 'John'\nlet greeting = `Hello, ${name}!`\nlet multi = `Line 1\nLine 2`\n\n// Tagged templates\nfunction tag(strings, ...values) {\n  return strings.raw.join('') + values.join(',')\n}",
           },
         ],
       },
@@ -379,7 +379,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: '// Math operations\n5 + 3\n5 - 3\n5 * 3\n6 / 3\n7 % 3\n2 ** 3\n\n// Increment/decrement\nlet count = 0\ncount++\ncount--\ncount += 5\ncount -= 2\n\n// Number methods\n;(3.14159).toFixed(2) // "3.14"\nNumber.isInteger(42) // true\nNumber.isNaN(NaN) // true\nNumber.parseFloat(\'3.14\') // 3.14\n\n// Math object\nMath.round(4.7)\nMath.floor(4.7)\nMath.ceil(4.3)\nMath.abs(-5)\nMath.max(1, 5, 3)\nMath.min(1, 5, 3)\nMath.random()\nMath.sqrt(16)\nMath.pow(2, 3)\nMath.trunc(4.7) // 4 (removes decimal)',
+            code: '// Math operations\n5 + 3\n5 - 3\n5 * 3\n6 / 3\n7 % 3\n2 ** 3\n\n// Increment/decrement\nlet count = 0\ncount++\ncount--\ncount += 5\ncount -= 2\n\n// Number methods\n;(3.14159).toFixed(2)     // "3.14"\nNumber.isInteger(42)      // true\nNumber.isNaN(NaN)         // true\nNumber.parseFloat(\'3.14\') // 3.14\n\n// Math object\nMath.round(4.7)\nMath.floor(4.7)\nMath.ceil(4.3)\nMath.abs(-5)\nMath.max(1, 5, 3)\nMath.min(1, 5, 3)\nMath.random()\nMath.sqrt(16)\nMath.pow(2, 3)\nMath.trunc(4.7) // 4 (removes decimal)',
           },
         ],
       },
@@ -390,7 +390,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "let fruits = ['apple', 'banana', 'orange']\n\n// Access and modify\nfruits[0]\nfruits.length\nfruits.push('grape') // Add to end\nfruits.unshift('mango') // Add to start\nfruits.pop() // Remove from end\nfruits.shift() // Remove from start\nfruits.splice(1, 1, 'kiwi') // Remove/insert at index\n\n// Search\nfruits.includes('banana')\nfruits.indexOf('banana')\nfruits.find((f) => f.length > 5)\nfruits.findIndex((f) => f.length > 5)\nfruits.findLast((f) => f.length > 5)\nfruits.some((f) => f.startsWith('a'))\nfruits.every((f) => f.length > 3)\n\n// Transform\nfruits.join(', ')\nfruits.slice(1, 3)\nfruits.reverse()\nfruits.sort()\nfruits.sort((a, b) => a.length - b.length)\nfruits.flat() // Flatten nested arrays\nfruits.flatMap((f) => [f, f.toUpperCase()])\n\n// Iterate\nfruits.forEach((f) => console.log(f))\nfruits.map((f) => f.toUpperCase())\nfruits.filter((f) => f.length > 5)\nfruits.reduce((acc, f) => acc + f.length, 0)\nfruits.reduceRight((acc, f) => acc + f, '')\n\n// Create arrays\nArray.from({ length: 5 }, (_, i) => i) // [0,1,2,3,4]\nArray.of(1, 2, 3)\nnew Array(5).fill(0)\n\n// Spread and destructuring\nlet moreFruits = [...fruits, 'kiwi']\nlet [first, second, ...rest] = fruits\n\n// Check empty\nfruits.length === 0",
+            code: "let fruits = ['apple', 'banana', 'orange']\n\n// Access and modify\nfruits[0]\nfruits.length\nfruits.push('grape')        // Add to end\nfruits.unshift('mango')     // Add to start\nfruits.pop()                // Remove from end\nfruits.shift()              // Remove from start\nfruits.splice(1, 1, 'kiwi') // Remove/insert at index\n\n// Search\nfruits.includes('banana')\nfruits.indexOf('banana')\nfruits.find((f) => f.length > 5)\nfruits.findIndex((f) => f.length > 5)\nfruits.findLast((f) => f.length > 5)\nfruits.some((f) => f.startsWith('a'))\nfruits.every((f) => f.length > 3)\n\n// Transform\nfruits.join(', ')\nfruits.slice(1, 3)\nfruits.reverse()\nfruits.sort()\nfruits.sort((a, b) => a.length - b.length)\nfruits.flat() // Flatten nested arrays\nfruits.flatMap((f) => [f, f.toUpperCase()])\n\n// Iterate\nfruits.forEach((f) => console.log(f))\nfruits.map((f) => f.toUpperCase())\nfruits.filter((f) => f.length > 5)\nfruits.reduce((acc, f) => acc + f.length, 0)\nfruits.reduceRight((acc, f) => acc + f, '')\n\n// Create arrays\nArray.from({ length: 5 }, (_, i) => i) // [0,1,2,3,4]\nArray.of(1, 2, 3)\nnew Array(5).fill(0)\n\n// Spread and destructuring\nlet moreFruits = [...fruits, 'kiwi']\nlet [first, second, ...rest] = fruits\n\n// Check empty\nfruits.length === 0",
           },
         ],
       },
@@ -401,7 +401,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "let person = {\n  name: 'John',\n  age: 30,\n  greet() {\n    return 'Hello, ' + this.name\n  },\n}\n\n// Access\nperson.name\nperson['age']\n\n// Add/modify/delete\nperson.email = 'john@example.com'\ndelete person.age\n\n// Check property\n'name' in person\nperson.hasOwnProperty('name')\nObject.hasOwn(person, 'name') // Modern way\n\n// Get keys/values/entries\nObject.keys(person)\nObject.values(person)\nObject.entries(person)\n\n// Loop\nfor (let key in person) {\n  console.log(key, person[key])\n}\n\n// Copy/merge\nlet copy = { ...person }\nlet merged = Object.assign({}, person, { city: 'NYC' })\n\n// Freeze/seal (immutability)\nObject.freeze(person) // No changes at all\nObject.seal(person) // Can modify, not add/remove\n\n// Destructuring\nlet { name, age } = person\nlet { name: n, age: a = 25 } = person // Rename and default\n\n// Computed property names\nlet key = 'dynamic'\nlet obj = { [key]: 'value' }\n\n// Optional chaining and nullish coalescing\nperson?.address?.city\nlet city = person.city ?? 'Unknown'",
+            code: "let person = {\n  name: 'John',\n  age: 30,\n  greet() {\n    return 'Hello, ' + this.name\n  },\n}\n\n// Access\nperson.name\nperson['age']\n\n// Add/modify/delete\nperson.email = 'john@example.com'\ndelete person.age\n\n// Check property\n'name' in person\nperson.hasOwnProperty('name')\nObject.hasOwn(person, 'name') // Modern way\n\n// Get keys/values/entries\nObject.keys(person)\nObject.values(person)\nObject.entries(person)\n\n// Loop\nfor (let key in person) {\n  console.log(key, person[key])\n}\n\n// Copy/merge\nlet copy = { ...person }\nlet merged = Object.assign({}, person, { city: 'NYC' })\n\n// Freeze/seal (immutability)\nObject.freeze(person) // No changes at all\nObject.seal(person)   // Can modify, not add/remove\n\n// Destructuring\nlet { name, age } = person\nlet { name: n, age: a = 25 } = person // Rename and default\n\n// Computed property names\nlet key = 'dynamic'\nlet obj = { [key]: 'value' }\n\n// Optional chaining and nullish coalescing\nperson?.address?.city\nlet city = person.city ?? 'Unknown'",
           },
         ],
       },
@@ -423,7 +423,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// If-else\nlet age = 18\nif (age >= 18) {\n  console.log('Adult')\n} else if (age >= 13) {\n  console.log('Teen')\n} else {\n  console.log('Child')\n}\n\n// Comparison operators\n5 == '5' // true (loose)\n5 === '5' // false (strict)\n5 != '5'\n5 !== '5'\n5 > 3\n5 < 3\n5 >= 5\n5 <= 3\n\n// Logical operators\nage >= 18 && age < 65\nage >= 18 || isCitizen\n!isStudent\n\n// Ternary\nlet status = age >= 18 ? 'Adult' : 'Minor'\n\n// Nullish coalescing\nlet name = userName ?? 'Guest'\n\n// Switch\nswitch (day) {\n  case 1:\n    console.log('Monday')\n    break\n  case 2:\n  case 3:\n    console.log('Tue or Wed')\n    break\n  default:\n    console.log('Other')\n}",
+            code: "// If-else\nlet age = 18\nif (age >= 18) {\n  console.log('Adult')\n} else if (age >= 13) {\n  console.log('Teen')\n} else {\n  console.log('Child')\n}\n\n// Comparison operators\n5 == '5'  // true (loose)\n5 === '5' // false (strict)\n5 != '5'\n5 !== '5'\n5 > 3\n5 < 3\n5 >= 5\n5 <= 3\n\n// Logical operators\nage >= 18 && age < 65\nage >= 18 || isCitizen\n!isStudent\n\n// Ternary\nlet status = age >= 18 ? 'Adult' : 'Minor'\n\n// Nullish coalescing\nlet name = userName ?? 'Guest'\n\n// Switch\nswitch (day) {\n  case 1:\n    console.log('Monday')\n    break\n  case 2:\n  case 3:\n    console.log('Tue or Wed')\n    break\n  default:\n    console.log('Other')\n}",
           },
         ],
       },
@@ -478,7 +478,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// Creating a promise\nconst myPromise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve('Success!')\n    // or reject(new Error(\"Failed\"));\n  }, 1000)\n})\n\n// Using .then/.catch\nmyPromise\n  .then((result) => console.log(result))\n  .catch((error) => console.error(error))\n  .finally(() => console.log('Done'))\n\n// Async/await (modern, preferred)\nasync function getData() {\n  try {\n    const result = await myPromise\n    console.log(result)\n  } catch (error) {\n    console.error(error)\n  }\n}\n\n// Multiple promises\nasync function getMultiple() {\n  const [result1, result2] = await Promise.all([promise1, promise2])\n}\n\n// Promise.race, Promise.allSettled, Promise.any\nPromise.race([promise1, promise2]) // First to complete\nPromise.allSettled([promise1, promise2]) // All results (success/fail)\nPromise.any([promise1, promise2]) // First to succeed\n\n// Fetch API\nasync function fetchData() {\n  const response = await fetch('https://api.example.com/data')\n  const data = await response.json()\n  return data\n}",
+            code: "// Creating a promise\nconst myPromise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve('Success!')\n    // or reject(new Error(\"Failed\"));\n  }, 1000)\n})\n\n// Using .then/.catch\nmyPromise\n  .then((result) => console.log(result))\n  .catch((error) => console.error(error))\n  .finally(() => console.log('Done'))\n\n// Async/await (modern, preferred)\nasync function getData() {\n  try {\n    const result = await myPromise\n    console.log(result)\n  } catch (error) {\n    console.error(error)\n  }\n}\n\n// Multiple promises\nasync function getMultiple() {\n  const [result1, result2] = await Promise.all([promise1, promise2])\n}\n\n// Promise.race, Promise.allSettled, Promise.any\nPromise.race([promise1, promise2])       // First to complete\nPromise.allSettled([promise1, promise2]) // All results (success/fail)\nPromise.any([promise1, promise2])        // First to succeed\n\n// Fetch API\nasync function fetchData() {\n  const response = await fetch('https://api.example.com/data')\n  const data = await response.json()\n  return data\n}",
           },
         ],
       },
@@ -500,7 +500,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "const pattern = /\\d+/\nconst text = 'I have 5 apples'\n\n// Test and match\npattern.test(text) // true\ntext.match(pattern) // [\"5\"]\ntext.match(/\\d+/g) // All matches\n\n// Replace with regex\ntext.replace(/\\d+/, 'many')\ntext.replace(/(\\d+)/, '[$1]')\n\n// Common patterns\n;/^\\d+$/ // Only digits\n;/^[a-zA-Z]+$/ // Only letters\n;/\\S+@\\S+\\.\\S+/ // Basic email\n;/^https?:\\/\\// // URL\n\n// Named groups\nconst re = /(?<year>\\d{4})-(?<month>\\d{2})/\nconst match = '2024-12'.match(re)\nconsole.log(match.groups.year)",
+            code: "const pattern = /\\d+/\nconst text = 'I have 5 apples'\n\n// Test and match\npattern.test(text)  // true\ntext.match(pattern) // [\"5\"]\ntext.match(/\\d+/g)  // All matches\n\n// Replace with regex\ntext.replace(/\\d+/, 'many')\ntext.replace(/(\\d+)/, '[$1]')\n\n// Common patterns\n;/^\\d+$/        // Only digits\n;/^[a-zA-Z]+$/  // Only letters\n;/\\S+@\\S+\\.\\S+/ // Basic email\n;/^https?:\\/\\// // URL\n\n// Named groups\nconst re = /(?<year>\\d{4})-(?<month>\\d{2})/\nconst match = '2024-12'.match(re)\nconsole.log(match.groups.year)",
           },
         ],
       },
@@ -874,7 +874,7 @@ export const refTopics: Record<string, RefTopic> = {
         title: 'SELECT — Read Data',
         description: 'Query and retrieve data:',
         language: 'sql',
-        code: "-- Select all columns\nSELECT * FROM users;\n\n-- Select specific columns\nSELECT username, email FROM users;\n\n-- Rename column in output\nSELECT username AS name, email AS contact FROM users;\n\n-- Distinct values\nSELECT DISTINCT city FROM users;\n\n-- Limit results\nSELECT * FROM users LIMIT 10;\nSELECT * FROM users LIMIT 5 OFFSET 10; -- Skip first 10\n\n-- Search with LIKE\nSELECT * FROM users WHERE username LIKE 'j%';  -- Starts with j\nSELECT * FROM users WHERE email LIKE '%@gmail%'; -- Contains @gmail",
+        code: "-- Select all columns\nSELECT * FROM users;\n\n-- Select specific columns\nSELECT username, email FROM users;\n\n-- Rename column in output\nSELECT username AS name, email AS contact FROM users;\n\n-- Distinct values\nSELECT DISTINCT city FROM users;\n\n-- Limit results\nSELECT * FROM users LIMIT 10;\nSELECT * FROM users LIMIT 5 OFFSET 10; -- Skip first 10\n\n-- Search with LIKE\nSELECT * FROM users WHERE username LIKE 'j%';    -- Starts with j\nSELECT * FROM users WHERE email LIKE '%@gmail%'; -- Contains @gmail",
       },
       {
         id: 'where',
@@ -1964,7 +1964,7 @@ export const refTopics: Record<string, RefTopic> = {
           },
           {
             language: 'php',
-            code: "// Register in app/Http/Kernel.php\nprotected $middlewareAliases = [\n    'age' => \\App\\Http\\Middleware\\CheckAge::class,\n];\n\n// Use in routes\nRoute::get('/profile', function () {\n    //\n})->middleware('age');\n\n// Multiple middleware\nRoute::get('/profile', function () {\n    //\n})->middleware(['auth', 'age']);\n\n// Built-in middleware\n'auth'                                                 // User must be authenticated\n'guest'                                                // User must NOT be authenticated\n'verified'                                             // Email must be verified\n'throttle:60,1' // Rate limiting (60 requests per minute)",
+            code: "// Register in app/Http/Kernel.php\nprotected $middlewareAliases = [\n    'age' => \\App\\Http\\Middleware\\CheckAge::class,\n];\n\n// Use in routes\nRoute::get('/profile', function () {\n    //\n})->middleware('age');\n\n// Multiple middleware\nRoute::get('/profile', function () {\n    //\n})->middleware(['auth', 'age']);\n\n// Built-in middleware\n'auth'          // User must be authenticated\n'guest'         // User must NOT be authenticated\n'verified'      // Email must be verified\n'throttle:60,1' // Rate limiting (60 requests per minute)",
           },
         ],
       },
@@ -2901,7 +2901,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// package.json needs: \"type\": \"module\"\n\n// math.js - Export\nexport function add(a, b) {\n  return a + b\n}\n\nexport function subtract(a, b) {\n  return a - b\n}\n\nexport default add // Default export\n\n// app.js - Import\nimport { add, subtract } from './math.js'\nimport add from './math.js' // Default import\nimport * as math from './math.js' // Import all",
+            code: "// package.json needs: \"type\": \"module\"\n\n// math.js - Export\nexport function add(a, b) {\n  return a + b\n}\n\nexport function subtract(a, b) {\n  return a - b\n}\n\nexport default add // Default export\n\n// app.js - Import\nimport { add, subtract } from './math.js'\nimport add from './math.js'       // Default import\nimport * as math from './math.js' // Import all",
           },
         ],
       },
@@ -2912,7 +2912,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "const fs = require('fs')\n\n// Read file (async, callback style)\nfs.readFile('file.txt', 'utf8', (err, data) => {\n  if (err) throw err\n  console.log(data)\n})\n\n// Read file (sync, blocks execution)\nconst data = fs.readFileSync('file.txt', 'utf8')\nconsole.log(data)\n\n// Write file (async)\nfs.writeFile('file.txt', 'Hello World', (err) => {\n  if (err) throw err\n  console.log('File saved')\n})\n\n// Write file (sync)\nfs.writeFileSync('file.txt', 'Hello World')\n\n// Append to file\nfs.appendFile('file.txt', 'New line\\n', (err) => {\n  if (err) throw err\n})\n\n// Check if file exists\nfs.existsSync('file.txt') // true/false\n\n// Delete file\nfs.unlink('file.txt', (err) => {\n  if (err) throw err\n})\n\n// Create directory\nfs.mkdir('newFolder', (err) => {\n  if (err) throw err\n})\n\nfs.mkdirSync('newFolder', { recursive: true }) // Create nested folders\n\n// Read directory contents\nfs.readdir('.', (err, files) => {\n  console.log(files) // Array of file/folder names\n})\n\n// Get file info\nfs.stat('file.txt', (err, stats) => {\n  console.log(stats.isFile()) // true\n  console.log(stats.isDirectory()) // false\n  console.log(stats.size) // File size in bytes\n})\n\n// Rename/move file\nfs.rename('old.txt', 'new.txt', (err) => {\n  if (err) throw err\n})\n\n// Copy file\nfs.copyFile('source.txt', 'dest.txt', (err) => {\n  if (err) throw err\n})\n\n// Modern promise-based API\nconst fsPromises = require('fs').promises\n\nasync function readFile() {\n  try {\n    const data = await fsPromises.readFile('file.txt', 'utf8')\n    console.log(data)\n  } catch (err) {\n    console.error(err)\n  }\n}",
+            code: "const fs = require('fs')\n\n// Read file (async, callback style)\nfs.readFile('file.txt', 'utf8', (err, data) => {\n  if (err) throw err\n  console.log(data)\n})\n\n// Read file (sync, blocks execution)\nconst data = fs.readFileSync('file.txt', 'utf8')\nconsole.log(data)\n\n// Write file (async)\nfs.writeFile('file.txt', 'Hello World', (err) => {\n  if (err) throw err\n  console.log('File saved')\n})\n\n// Write file (sync)\nfs.writeFileSync('file.txt', 'Hello World')\n\n// Append to file\nfs.appendFile('file.txt', 'New line\\n', (err) => {\n  if (err) throw err\n})\n\n// Check if file exists\nfs.existsSync('file.txt') // true/false\n\n// Delete file\nfs.unlink('file.txt', (err) => {\n  if (err) throw err\n})\n\n// Create directory\nfs.mkdir('newFolder', (err) => {\n  if (err) throw err\n})\n\nfs.mkdirSync('newFolder', { recursive: true }) // Create nested folders\n\n// Read directory contents\nfs.readdir('.', (err, files) => {\n  console.log(files) // Array of file/folder names\n})\n\n// Get file info\nfs.stat('file.txt', (err, stats) => {\n  console.log(stats.isFile())      // true\n  console.log(stats.isDirectory()) // false\n  console.log(stats.size)          // File size in bytes\n})\n\n// Rename/move file\nfs.rename('old.txt', 'new.txt', (err) => {\n  if (err) throw err\n})\n\n// Copy file\nfs.copyFile('source.txt', 'dest.txt', (err) => {\n  if (err) throw err\n})\n\n// Modern promise-based API\nconst fsPromises = require('fs').promises\n\nasync function readFile() {\n  try {\n    const data = await fsPromises.readFile('file.txt', 'utf8')\n    console.log(data)\n  } catch (err) {\n    console.error(err)\n  }\n}",
           },
         ],
       },
@@ -2923,7 +2923,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "const path = require('path')\n\n// Join paths (cross-platform safe)\npath.join('folder', 'subfolder', 'file.txt') // folder/subfolder/file.txt\n\n// Resolve to absolute path\npath.resolve('file.txt') // /full/path/to/file.txt\n\n// Get file extension\npath.extname('file.txt') // .txt\n\n// Get file name (without directory)\npath.basename('/folder/file.txt') // file.txt\npath.basename('/folder/file.txt', '.txt') // file\n\n// Get directory name\npath.dirname('/folder/file.txt') // /folder\n\n// Parse path into object\npath.parse('/folder/file.txt')\n// { root: '/', dir: '/folder', base: 'file.txt', ext: '.txt', name: 'file' }\n\n// Current directory\n__dirname // Directory of current file\n__filename // Full path of current file",
+            code: "const path = require('path')\n\n// Join paths (cross-platform safe)\npath.join('folder', 'subfolder', 'file.txt') // folder/subfolder/file.txt\n\n// Resolve to absolute path\npath.resolve('file.txt') // /full/path/to/file.txt\n\n// Get file extension\npath.extname('file.txt') // .txt\n\n// Get file name (without directory)\npath.basename('/folder/file.txt')         // file.txt\npath.basename('/folder/file.txt', '.txt') // file\n\n// Get directory name\npath.dirname('/folder/file.txt') // /folder\n\n// Parse path into object\npath.parse('/folder/file.txt')\n// { root: '/', dir: '/folder', base: 'file.txt', ext: '.txt', name: 'file' }\n\n// Current directory\n__dirname  // Directory of current file\n__filename // Full path of current file",
           },
         ],
       },
@@ -2964,7 +2964,7 @@ export const refTopics: Record<string, RefTopic> = {
           },
           {
             language: 'javascript',
-            code: "const helmet = require('helmet')\nconst morgan = require('morgan')\n\napp.use(helmet()) // Security headers\napp.use(morgan('dev')) // Request logging",
+            code: "const helmet = require('helmet')\nconst morgan = require('morgan')\n\napp.use(helmet())      // Security headers\napp.use(morgan('dev')) // Request logging",
           },
         ],
       },
@@ -2986,7 +2986,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "app.get('/example', (req, res) => {\n  // Request properties\n  req.params // Route parameters (/users/:id)\n  req.query // Query string (?key=value)\n  req.body // Request body (needs express.json())\n  req.headers // Request headers\n  req.method // HTTP method\n  req.url // Request URL\n  req.cookies // Cookies (needs cookie-parser)\n\n  // Response methods\n  res.send('text') // Send text/html response\n  res.json({ key: 'value' }) // Send JSON response\n  res.status(404).send('Not Found') // Set status code\n  res.redirect('/home') // Redirect\n  res.render('view', { data }) // Render template\n  res.sendFile('/path/file.pdf') // Send a file\n  res.download('/path/file.pdf') // Download file\n  res.cookie('name', 'value') // Set cookie\n  res.clearCookie('name') // Clear cookie\n\n  // Chaining\n  res.status(201).json({ created: true })\n})",
+            code: "app.get('/example', (req, res) => {\n  // Request properties\n  req.params  // Route parameters (/users/:id)\n  req.query   // Query string (?key=value)\n  req.body    // Request body (needs express.json())\n  req.headers // Request headers\n  req.method  // HTTP method\n  req.url     // Request URL\n  req.cookies // Cookies (needs cookie-parser)\n\n  // Response methods\n  res.send('text')                  // Send text/html response\n  res.json({ key: 'value' })        // Send JSON response\n  res.status(404).send('Not Found') // Set status code\n  res.redirect('/home')             // Redirect\n  res.render('view', { data })      // Render template\n  res.sendFile('/path/file.pdf')    // Send a file\n  res.download('/path/file.pdf')    // Download file\n  res.cookie('name', 'value')       // Set cookie\n  res.clearCookie('name')           // Clear cookie\n\n  // Chaining\n  res.status(201).json({ created: true })\n})",
           },
         ],
       },
@@ -3109,7 +3109,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "const os = require('os')\n\n// Process info\nprocess.env // Environment variables\nprocess.argv // Command line arguments\nprocess.platform // 'win32', 'darwin', 'linux'\nprocess.exit(0) // Exit process (0 = success)\nprocess.cwd() // Current working directory\n\n// OS info\nos.platform() // Operating system platform\nos.cpus() // CPU info\nos.totalmem() // Total memory\nos.freemem() // Free memory\nos.homedir() // Home directory\n\n// Environment-based logic\nif (process.env.NODE_ENV === 'production') {\n  console.log('Running in production')\n}\n\n// Handle uncaught errors\nprocess.on('uncaughtException', (err) => {\n  console.error('Uncaught Exception:', err)\n})\n\n// Graceful shutdown\nprocess.on('SIGTERM', () => {\n  console.log('Shutting down gracefully')\n  process.exit(0)\n})",
+            code: "const os = require('os')\n\n// Process info\nprocess.env      // Environment variables\nprocess.argv     // Command line arguments\nprocess.platform // 'win32', 'darwin', 'linux'\nprocess.exit(0)  // Exit process (0 = success)\nprocess.cwd()    // Current working directory\n\n// OS info\nos.platform() // Operating system platform\nos.cpus()     // CPU info\nos.totalmem() // Total memory\nos.freemem()  // Free memory\nos.homedir()  // Home directory\n\n// Environment-based logic\nif (process.env.NODE_ENV === 'production') {\n  console.log('Running in production')\n}\n\n// Handle uncaught errors\nprocess.on('uncaughtException', (err) => {\n  console.error('Uncaught Exception:', err)\n})\n\n// Graceful shutdown\nprocess.on('SIGTERM', () => {\n  console.log('Shutting down gracefully')\n  process.exit(0)\n})",
           },
         ],
       },
@@ -3225,7 +3225,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'python',
-            code: 'text = "Hello World"\n\n# String length\nlen(text)                                              # 11\n\n# Uppercase and lowercase\ntext.upper()                                           # "HELLO WORLD"\ntext.lower()                                           # "hello world"\ntext.title()                                           # "Hello World"\ntext.capitalize()                                      # "Hello world"\n\n# Trim whitespace\n"  hello  ".strip()                                    # "hello"\n"  hello  ".lstrip()                                   # "hello  "\n"  hello  ".rstrip()                                   # "  hello"\n\n# Check content\ntext.startswith("Hello")                               # True\ntext.endswith("World")                                 # True\n"World" in text                                        # True (contains)\n\n# Find position\ntext.find("World")                                     # 6\ntext.index("World")                                    # 6 (raises error if not found)\n\n# Replace text\ntext.replace("World", "Python")                        # "Hello Python"\n\n# Split string into list\ntext.split(" ")                                        # ["Hello", "World"]\n"a,b,c".split(",")                                     # ["a", "b", "c"]\n\n# Join list into string\n" ".join(["Hello", "World"])                           # "Hello World"\n",".join(["a", "b", "c"])                              # "a,b,c"\n\n# String formatting (f-strings, modern way)\nname = "John"\nage = 30\nf"My name is {name} and I am {age} years old"\n\n# Format method\n"My name is {} and I am {}".format(name, age)\n\n# % formatting (older way)\n"My name is %s and I am %d" % (name, age)\n\n# String repetition\n"Ha" * 3                                               # "HaHaHa"\n\n# Reverse string\ntext[::-1]\n\n# Slicing\ntext[0:5]                                              # "Hello"\ntext[6:]                                               # "World"\ntext[:5]                                               # "Hello"\ntext[-5:]                                              # "World"\n\n# Check if numeric/alpha\n"123".isdigit()                                        # True\n"abc".isalpha()                                        # True\n"abc123".isalnum() # True',
+            code: 'text = "Hello World"\n\n# String length\nlen(text)                                              # 11\n\n# Uppercase and lowercase\ntext.upper()                                           # "HELLO WORLD"\ntext.lower()                                           # "hello world"\ntext.title()                                           # "Hello World"\ntext.capitalize()                                      # "Hello world"\n\n# Trim whitespace\n"  hello  ".strip()                                    # "hello"\n"  hello  ".lstrip()                                   # "hello  "\n"  hello  ".rstrip()                                   # "  hello"\n\n# Check content\ntext.startswith("Hello")                               # True\ntext.endswith("World")                                 # True\n"World" in text                                        # True (contains)\n\n# Find position\ntext.find("World")                                     # 6\ntext.index("World")                                    # 6 (raises error if not found)\n\n# Replace text\ntext.replace("World", "Python")                        # "Hello Python"\n\n# Split string into list\ntext.split(" ")                                        # ["Hello", "World"]\n"a,b,c".split(",")                                     # ["a", "b", "c"]\n\n# Join list into string\n" ".join(["Hello", "World"])                           # "Hello World"\n",".join(["a", "b", "c"])                              # "a,b,c"\n\n# String formatting (f-strings, modern way)\nname = "John"\nage = 30\nf"My name is {name} and I am {age} years old"\n\n# Format method\n"My name is {} and I am {}".format(name, age)\n\n# % formatting (older way)\n"My name is %s and I am %d" % (name, age)\n\n# String repetition\n"Ha" * 3                                               # "HaHaHa"\n\n# Reverse string\ntext[::-1]\n\n# Slicing\ntext[0:5]                                              # "Hello"\ntext[6:]                                               # "World"\ntext[:5]                                               # "Hello"\ntext[-5:]                                              # "World"\n\n# Check if numeric/alpha\n"123".isdigit()    # True\n"abc".isalpha()    # True\n"abc123".isalnum() # True',
           },
         ],
       },
@@ -3932,7 +3932,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'csharp',
-            code: '// If statement\nint age = 18;\nif (age >= 18)\n{\n    Console.WriteLine("Adult");\n}\n\n// If-else\nif (age >= 18)\n{\n    Console.WriteLine("Adult");\n}\nelse\n{\n    Console.WriteLine("Minor");\n}\n\n// If-else if-else\nint score = 85;\nif (score >= 90)\n{\n    Console.WriteLine("A");\n}\nelse if (score >= 80)\n{\n    Console.WriteLine("B");\n}\nelse\n{\n    Console.WriteLine("F");\n}\n\n// Comparison operators\n5 == 5                                                 // true\n5 != 3                                                 // true\n5 > 3                                                  // true\n5 < 3                                                  // false\n5 >= 5                                                 // true\n5 <= 3                                                 // false\n\n// Logical operators\nbool isAdult = age >= 18 && age < 65;                  // AND\nbool canVote = age >= 18 || isCitizen; // OR\nbool isNotStudent = !isStudent;                        // NOT\n\n// Ternary operator\nstring status = age >= 18 ? "Adult" : "Minor";\n\n// Null coalescing operator\nstring name = userName ?? "Guest";\n\n// Null coalescing assignment\nname ??= "Guest";\n\n// Switch statement\nint day = 2;\nswitch (day)\n{\n    case 1:\n        Console.WriteLine("Monday");\n        break;\n    case 2:\n        Console.WriteLine("Tuesday");\n        break;\n    default:\n        Console.WriteLine("Other day");\n        break;\n}\n\n// Switch expression (modern, C# 8+)\nstring dayName = day switch\n{\n    1 => "Monday",\n    2 => "Tuesday",\n    3 => "Wednesday",\n    _ => "Other day"\n};',
+            code: '// If statement\nint age = 18;\nif (age >= 18)\n{\n    Console.WriteLine("Adult");\n}\n\n// If-else\nif (age >= 18)\n{\n    Console.WriteLine("Adult");\n}\nelse\n{\n    Console.WriteLine("Minor");\n}\n\n// If-else if-else\nint score = 85;\nif (score >= 90)\n{\n    Console.WriteLine("A");\n}\nelse if (score >= 80)\n{\n    Console.WriteLine("B");\n}\nelse\n{\n    Console.WriteLine("F");\n}\n\n// Comparison operators\n5 == 5                                                 // true\n5 != 3                                                 // true\n5 > 3                                                  // true\n5 < 3                                                  // false\n5 >= 5                                                 // true\n5 <= 3                                                 // false\n\n// Logical operators\nbool isAdult = age >= 18 && age < 65;  // AND\nbool canVote = age >= 18 || isCitizen; // OR\nbool isNotStudent = !isStudent;        // NOT\n\n// Ternary operator\nstring status = age >= 18 ? "Adult" : "Minor";\n\n// Null coalescing operator\nstring name = userName ?? "Guest";\n\n// Null coalescing assignment\nname ??= "Guest";\n\n// Switch statement\nint day = 2;\nswitch (day)\n{\n    case 1:\n        Console.WriteLine("Monday");\n        break;\n    case 2:\n        Console.WriteLine("Tuesday");\n        break;\n    default:\n        Console.WriteLine("Other day");\n        break;\n}\n\n// Switch expression (modern, C# 8+)\nstring dayName = day switch\n{\n    1 => "Monday",\n    2 => "Tuesday",\n    3 => "Wednesday",\n    _ => "Other day"\n};',
           },
         ],
       },
@@ -4193,7 +4193,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'java',
-            code: '// If statement\nint age = 18;\nif (age >= 18) {\n    System.out.println("Adult");\n}\n\n// If-else\nif (age >= 18) {\n    System.out.println("Adult");\n} else {\n    System.out.println("Minor");\n}\n\n// If-else if-else\nint score = 85;\nif (score >= 90) {\n    System.out.println("A");\n} else if (score >= 80) {\n    System.out.println("B");\n} else {\n    System.out.println("F");\n}\n\n// Comparison operators\n5 == 5                                                 // true\n5 != 3                                                 // true\n5 > 3                                                  // true\n5 < 3                                                  // false\n5 >= 5                                                 // true\n5 <= 3                                                 // false\n\n// Logical operators\nboolean isAdult = age >= 18 && age < 65;               // AND\nboolean canVote = age >= 18 || isCitizen; // OR\nboolean isNotStudent = !isStudent;                     // NOT\n\n// Ternary operator\nString status = age >= 18 ? "Adult" : "Minor";\n\n// Switch statement\nint day = 2;\nswitch (day) {\n    case 1:\n        System.out.println("Monday");\n        break;\n    case 2:\n        System.out.println("Tuesday");\n        break;\n    default:\n        System.out.println("Other day");\n        break;\n}\n\n// Switch expression (Java 14+)\nString dayName = switch (day) {\n    case 1 -> "Monday";\n    case 2 -> "Tuesday";\n    case 3 -> "Wednesday";\n    default -> "Other day";\n};',
+            code: '// If statement\nint age = 18;\nif (age >= 18) {\n    System.out.println("Adult");\n}\n\n// If-else\nif (age >= 18) {\n    System.out.println("Adult");\n} else {\n    System.out.println("Minor");\n}\n\n// If-else if-else\nint score = 85;\nif (score >= 90) {\n    System.out.println("A");\n} else if (score >= 80) {\n    System.out.println("B");\n} else {\n    System.out.println("F");\n}\n\n// Comparison operators\n5 == 5                                                 // true\n5 != 3                                                 // true\n5 > 3                                                  // true\n5 < 3                                                  // false\n5 >= 5                                                 // true\n5 <= 3                                                 // false\n\n// Logical operators\nboolean isAdult = age >= 18 && age < 65;  // AND\nboolean canVote = age >= 18 || isCitizen; // OR\nboolean isNotStudent = !isStudent;        // NOT\n\n// Ternary operator\nString status = age >= 18 ? "Adult" : "Minor";\n\n// Switch statement\nint day = 2;\nswitch (day) {\n    case 1:\n        System.out.println("Monday");\n        break;\n    case 2:\n        System.out.println("Tuesday");\n        break;\n    default:\n        System.out.println("Other day");\n        break;\n}\n\n// Switch expression (Java 14+)\nString dayName = switch (day) {\n    case 1 -> "Monday";\n    case 2 -> "Tuesday";\n    case 3 -> "Wednesday";\n    default -> "Other day";\n};',
           },
         ],
       },
@@ -4259,7 +4259,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'java',
-            code: 'import java.util.stream.*;\nimport java.util.List;\n\nList<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\n// Filter\nList<Integer> evens = numbers.stream()\n    .filter(n -> n % 2 == 0)\n    .collect(Collectors.toList());\n\n// Map (transform)\nList<Integer> doubled = numbers.stream()\n    .map(n -> n * 2)\n    .collect(Collectors.toList());\n\n// Sorted\nList<Integer> sorted = numbers.stream()\n    .sorted()\n    .collect(Collectors.toList());\n\nList<Integer> sortedDesc = numbers.stream()\n    .sorted(Comparator.reverseOrder())\n    .collect(Collectors.toList());\n\n// Sum, Average, Max, Min\nint sum = numbers.stream().mapToInt(Integer::intValue).sum();\nOptionalDouble average = numbers.stream().mapToInt(Integer::intValue).average();\nOptional<Integer> max = numbers.stream().max(Integer::compareTo);\nOptional<Integer> min = numbers.stream().min(Integer::compareTo);\n\n// Count\nlong count = numbers.stream().filter(n -> n > 5).count();\n\n// AnyMatch, AllMatch\nboolean hasEven = numbers.stream().anyMatch(n -> n % 2 == 0);\nboolean allPositive = numbers.stream().allMatch(n -> n > 0);\n\n// First element\nOptional<Integer> first = numbers.stream().findFirst();\n\n// Reduce (combine into single value)\nint total = numbers.stream().reduce(0, Integer::sum);\n\n// Chaining operations\nList<Integer> result = numbers.stream()\n    .filter(n -> n > 2)\n    .map(n -> n * 2)\n    .sorted()\n    .collect(Collectors.toList());\n\n// Joining strings\nList<String> names = List.of("John", "Jane", "Bob");\nString joined = names.stream().collect(Collectors.joining(", "));\n\n// Grouping\nMap<Boolean, List<Integer>> grouped = numbers.stream()\n    .collect(Collectors.groupingBy(n -> n % 2 == 0));\n\n// Stream from array\nint[] arr = {1, 2, 3};\nIntStream.of(arr).sum();\n\n// Range\nIntStream.range(0, 5).forEach(System.out::println);    // 0-4\nIntStream.rangeClosed(0, 5).forEach(System.out::println);  // 0-5',
+            code: 'import java.util.stream.*;\nimport java.util.List;\n\nList<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\n// Filter\nList<Integer> evens = numbers.stream()\n    .filter(n -> n % 2 == 0)\n    .collect(Collectors.toList());\n\n// Map (transform)\nList<Integer> doubled = numbers.stream()\n    .map(n -> n * 2)\n    .collect(Collectors.toList());\n\n// Sorted\nList<Integer> sorted = numbers.stream()\n    .sorted()\n    .collect(Collectors.toList());\n\nList<Integer> sortedDesc = numbers.stream()\n    .sorted(Comparator.reverseOrder())\n    .collect(Collectors.toList());\n\n// Sum, Average, Max, Min\nint sum = numbers.stream().mapToInt(Integer::intValue).sum();\nOptionalDouble average = numbers.stream().mapToInt(Integer::intValue).average();\nOptional<Integer> max = numbers.stream().max(Integer::compareTo);\nOptional<Integer> min = numbers.stream().min(Integer::compareTo);\n\n// Count\nlong count = numbers.stream().filter(n -> n > 5).count();\n\n// AnyMatch, AllMatch\nboolean hasEven = numbers.stream().anyMatch(n -> n % 2 == 0);\nboolean allPositive = numbers.stream().allMatch(n -> n > 0);\n\n// First element\nOptional<Integer> first = numbers.stream().findFirst();\n\n// Reduce (combine into single value)\nint total = numbers.stream().reduce(0, Integer::sum);\n\n// Chaining operations\nList<Integer> result = numbers.stream()\n    .filter(n -> n > 2)\n    .map(n -> n * 2)\n    .sorted()\n    .collect(Collectors.toList());\n\n// Joining strings\nList<String> names = List.of("John", "Jane", "Bob");\nString joined = names.stream().collect(Collectors.joining(", "));\n\n// Grouping\nMap<Boolean, List<Integer>> grouped = numbers.stream()\n    .collect(Collectors.groupingBy(n -> n % 2 == 0));\n\n// Stream from array\nint[] arr = {1, 2, 3};\nIntStream.of(arr).sum();\n\n// Range\nIntStream.range(0, 5).forEach(System.out::println);       // 0-4\nIntStream.rangeClosed(0, 5).forEach(System.out::println); // 0-5',
           },
         ],
       },
@@ -4721,7 +4721,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// Find all documents\ndb.users.find()\n\n// Find with pretty formatting\ndb.users.find().pretty()\n\n// Find one document\ndb.users.findOne({ name: 'John' })\n\n// Find with condition\ndb.users.find({ age: 30 })\n\n// Find with multiple conditions (AND)\ndb.users.find({ age: 30, name: 'John' })\n\n// Select specific fields (projection)\ndb.users.find({}, { name: 1, email: 1 }) // Include fields\ndb.users.find({}, { password: 0 }) // Exclude field\ndb.users.find({}, { _id: 0, name: 1 }) // Exclude _id\n\n// Count documents\ndb.users.countDocuments()\ndb.users.countDocuments({ age: { $gt: 25 } })\n\n// Limit and skip (pagination)\ndb.users.find().limit(10)\ndb.users.find().skip(10).limit(10)\n\n// Sort results\ndb.users.find().sort({ age: 1 }) // Ascending\ndb.users.find().sort({ age: -1 }) // Descending\ndb.users.find().sort({ age: -1, name: 1 }) // Multiple fields",
+            code: "// Find all documents\ndb.users.find()\n\n// Find with pretty formatting\ndb.users.find().pretty()\n\n// Find one document\ndb.users.findOne({ name: 'John' })\n\n// Find with condition\ndb.users.find({ age: 30 })\n\n// Find with multiple conditions (AND)\ndb.users.find({ age: 30, name: 'John' })\n\n// Select specific fields (projection)\ndb.users.find({}, { name: 1, email: 1 }) // Include fields\ndb.users.find({}, { password: 0 })       // Exclude field\ndb.users.find({}, { _id: 0, name: 1 })   // Exclude _id\n\n// Count documents\ndb.users.countDocuments()\ndb.users.countDocuments({ age: { $gt: 25 } })\n\n// Limit and skip (pagination)\ndb.users.find().limit(10)\ndb.users.find().skip(10).limit(10)\n\n// Sort results\ndb.users.find().sort({ age: 1 })           // Ascending\ndb.users.find().sort({ age: -1 })          // Descending\ndb.users.find().sort({ age: -1, name: 1 }) // Multiple fields",
           },
         ],
       },
@@ -4732,7 +4732,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// Comparison operators\ndb.users.find({ age: { $eq: 30 } }) // Equal\ndb.users.find({ age: { $ne: 30 } }) // Not equal\ndb.users.find({ age: { $gt: 25 } }) // Greater than\ndb.users.find({ age: { $gte: 25 } }) // Greater than or equal\ndb.users.find({ age: { $lt: 40 } }) // Less than\ndb.users.find({ age: { $lte: 40 } }) // Less than or equal\ndb.users.find({ age: { $in: [25, 30, 35] } }) // In array\ndb.users.find({ age: { $nin: [25, 30] } }) // Not in array\n\n// Logical operators\ndb.users.find({ $and: [{ age: { $gt: 25 } }, { age: { $lt: 40 } }] })\ndb.users.find({ $or: [{ name: 'John' }, { name: 'Jane' }] })\ndb.users.find({ $nor: [{ name: 'John' }, { age: 30 }] })\ndb.users.find({ age: { $not: { $eq: 30 } } })\n\n// Element operators\ndb.users.find({ email: { $exists: true } }) // Field exists\ndb.users.find({ email: { $exists: false } }) // Field doesn't exist\ndb.users.find({ age: { $type: 'number' } }) // Check type\n\n// Evaluation operators\ndb.users.find({ name: { $regex: '^J' } }) // Regex pattern\ndb.users.find({ name: /^J/ }) // Regex shorthand\ndb.users.find({ name: { $regex: 'john', $options: 'i' } }) // Case insensitive\n\n// Array operators\ndb.posts.find({ tags: { $all: ['mongodb', 'database'] } }) // Contains all\ndb.posts.find({ tags: 'mongodb' }) // Contains value\ndb.posts.find({ 'comments.2': { $exists: true } }) // Array size check\ndb.posts.find({ tags: { $size: 3 } }) // Exact array size\n\n// Nested field query (dot notation)\ndb.users.find({ 'address.city': 'New York' })",
+            code: "// Comparison operators\ndb.users.find({ age: { $eq: 30 } })           // Equal\ndb.users.find({ age: { $ne: 30 } })           // Not equal\ndb.users.find({ age: { $gt: 25 } })           // Greater than\ndb.users.find({ age: { $gte: 25 } })          // Greater than or equal\ndb.users.find({ age: { $lt: 40 } })           // Less than\ndb.users.find({ age: { $lte: 40 } })          // Less than or equal\ndb.users.find({ age: { $in: [25, 30, 35] } }) // In array\ndb.users.find({ age: { $nin: [25, 30] } })    // Not in array\n\n// Logical operators\ndb.users.find({ $and: [{ age: { $gt: 25 } }, { age: { $lt: 40 } }] })\ndb.users.find({ $or: [{ name: 'John' }, { name: 'Jane' }] })\ndb.users.find({ $nor: [{ name: 'John' }, { age: 30 }] })\ndb.users.find({ age: { $not: { $eq: 30 } } })\n\n// Element operators\ndb.users.find({ email: { $exists: true } })  // Field exists\ndb.users.find({ email: { $exists: false } }) // Field doesn't exist\ndb.users.find({ age: { $type: 'number' } })  // Check type\n\n// Evaluation operators\ndb.users.find({ name: { $regex: '^J' } })                  // Regex pattern\ndb.users.find({ name: /^J/ })                              // Regex shorthand\ndb.users.find({ name: { $regex: 'john', $options: 'i' } }) // Case insensitive\n\n// Array operators\ndb.posts.find({ tags: { $all: ['mongodb', 'database'] } }) // Contains all\ndb.posts.find({ tags: 'mongodb' })                         // Contains value\ndb.posts.find({ 'comments.2': { $exists: true } })         // Array size check\ndb.posts.find({ tags: { $size: 3 } })                      // Exact array size\n\n// Nested field query (dot notation)\ndb.users.find({ 'address.city': 'New York' })",
           },
         ],
       },
@@ -4743,7 +4743,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// Update single document\ndb.users.updateOne({ name: 'John' }, { $set: { age: 31 } })\n\n// Update multiple documents\ndb.users.updateMany({ age: { $lt: 30 } }, { $set: { status: 'young' } })\n\n// Replace entire document\ndb.users.replaceOne({ name: 'John' }, { name: 'John', age: 31, email: 'newemail@example.com' })\n\n// Update operators\ndb.users.updateOne({ name: 'John' }, { $set: { age: 31 } }) // Set field\ndb.users.updateOne({ name: 'John' }, { $unset: { age: '' } }) // Remove field\ndb.users.updateOne({ name: 'John' }, { $inc: { age: 1 } }) // Increment\ndb.users.updateOne({ name: 'John' }, { $mul: { age: 2 } }) // Multiply\ndb.users.updateOne({ name: 'John' }, { $rename: { age: 'years' } }) // Rename field\ndb.users.updateOne({ name: 'John' }, { $min: { age: 25 } }) // Set if less\ndb.users.updateOne({ name: 'John' }, { $max: { age: 35 } }) // Set if greater\n\n// Array update operators\ndb.posts.updateOne({ _id: 1 }, { $push: { tags: 'new-tag' } }) // Add to array\ndb.posts.updateOne({ _id: 1 }, { $push: { tags: { $each: ['a', 'b'] } } }) // Add multiple\ndb.posts.updateOne({ _id: 1 }, { $pull: { tags: 'old-tag' } }) // Remove from array\ndb.posts.updateOne({ _id: 1 }, { $addToSet: { tags: 'unique-tag' } }) // Add if not exists\ndb.posts.updateOne({ _id: 1 }, { $pop: { tags: 1 } }) // Remove last (1) or first (-1)\n\n// Upsert (insert if not found)\ndb.users.updateOne({ email: 'new@example.com' }, { $set: { name: 'New User' } }, { upsert: true })\n\n// Update and return document (findOneAndUpdate)\ndb.users.findOneAndUpdate({ name: 'John' }, { $set: { age: 31 } }, { returnDocument: 'after' })",
+            code: "// Update single document\ndb.users.updateOne({ name: 'John' }, { $set: { age: 31 } })\n\n// Update multiple documents\ndb.users.updateMany({ age: { $lt: 30 } }, { $set: { status: 'young' } })\n\n// Replace entire document\ndb.users.replaceOne({ name: 'John' }, { name: 'John', age: 31, email: 'newemail@example.com' })\n\n// Update operators\ndb.users.updateOne({ name: 'John' }, { $set: { age: 31 } })         // Set field\ndb.users.updateOne({ name: 'John' }, { $unset: { age: '' } })       // Remove field\ndb.users.updateOne({ name: 'John' }, { $inc: { age: 1 } })          // Increment\ndb.users.updateOne({ name: 'John' }, { $mul: { age: 2 } })          // Multiply\ndb.users.updateOne({ name: 'John' }, { $rename: { age: 'years' } }) // Rename field\ndb.users.updateOne({ name: 'John' }, { $min: { age: 25 } })         // Set if less\ndb.users.updateOne({ name: 'John' }, { $max: { age: 35 } })         // Set if greater\n\n// Array update operators\ndb.posts.updateOne({ _id: 1 }, { $push: { tags: 'new-tag' } })             // Add to array\ndb.posts.updateOne({ _id: 1 }, { $push: { tags: { $each: ['a', 'b'] } } }) // Add multiple\ndb.posts.updateOne({ _id: 1 }, { $pull: { tags: 'old-tag' } })             // Remove from array\ndb.posts.updateOne({ _id: 1 }, { $addToSet: { tags: 'unique-tag' } })      // Add if not exists\ndb.posts.updateOne({ _id: 1 }, { $pop: { tags: 1 } })                      // Remove last (1) or first (-1)\n\n// Upsert (insert if not found)\ndb.users.updateOne({ email: 'new@example.com' }, { $set: { name: 'New User' } }, { upsert: true })\n\n// Update and return document (findOneAndUpdate)\ndb.users.findOneAndUpdate({ name: 'John' }, { $set: { age: 31 } }, { returnDocument: 'after' })",
           },
         ],
       },
@@ -4776,7 +4776,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// Create index\ndb.users.createIndex({ email: 1 }) // Ascending\ndb.users.createIndex({ email: -1 }) // Descending\n\n// Create unique index\ndb.users.createIndex({ email: 1 }, { unique: true })\n\n// Create compound index\ndb.users.createIndex({ name: 1, age: -1 })\n\n// Create text index (for text search)\ndb.articles.createIndex({ content: 'text' })\n\n// List all indexes\ndb.users.getIndexes()\n\n// Drop index\ndb.users.dropIndex('email_1')\n\n// Drop all indexes (except _id)\ndb.users.dropIndexes()\n\n// Explain query performance\ndb.users.find({ email: 'john@example.com' }).explain('executionStats')",
+            code: "// Create index\ndb.users.createIndex({ email: 1 })  // Ascending\ndb.users.createIndex({ email: -1 }) // Descending\n\n// Create unique index\ndb.users.createIndex({ email: 1 }, { unique: true })\n\n// Create compound index\ndb.users.createIndex({ name: 1, age: -1 })\n\n// Create text index (for text search)\ndb.articles.createIndex({ content: 'text' })\n\n// List all indexes\ndb.users.getIndexes()\n\n// Drop index\ndb.users.dropIndex('email_1')\n\n// Drop all indexes (except _id)\ndb.users.dropIndexes()\n\n// Explain query performance\ndb.users.find({ email: 'john@example.com' }).explain('executionStats')",
           },
         ],
       },
@@ -5142,7 +5142,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// By tag\n$('p')\n\n// By ID\n$('#myId')\n\n// By class\n$('.myClass')\n\n// Multiple selectors\n$('p, .myClass, #myId')\n\n// Descendant selector\n$('div p')\n\n// Direct child\n$('div > p')\n\n// Attribute selector\n$(\"input[type='text']\")\n$(\"a[href^='https']\") // Starts with\n$(\"a[href$='.pdf']\") // Ends with\n$(\"a[href*='example']\") // Contains\n\n// Pseudo-selectors\n$('li:first')\n$('li:last')\n$('li:even')\n$('li:odd')\n$('li:eq(2)') // Index 2\n$(\"p:contains('Hello')\")\n$('input:checked')\n$('input:disabled')\n$(':visible')\n$(':hidden')\n\n// This selector (inside event handlers)\n$(this)",
+            code: "// By tag\n$('p')\n\n// By ID\n$('#myId')\n\n// By class\n$('.myClass')\n\n// Multiple selectors\n$('p, .myClass, #myId')\n\n// Descendant selector\n$('div p')\n\n// Direct child\n$('div > p')\n\n// Attribute selector\n$(\"input[type='text']\")\n$(\"a[href^='https']\")   // Starts with\n$(\"a[href$='.pdf']\")    // Ends with\n$(\"a[href*='example']\") // Contains\n\n// Pseudo-selectors\n$('li:first')\n$('li:last')\n$('li:even')\n$('li:odd')\n$('li:eq(2)') // Index 2\n$(\"p:contains('Hello')\")\n$('input:checked')\n$('input:disabled')\n$(':visible')\n$(':hidden')\n\n// This selector (inside event handlers)\n$(this)",
           },
         ],
       },
@@ -5153,7 +5153,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// Get/set text\n$('p').text() // Get text\n$('p').text('New text') // Set text\n\n// Get/set HTML\n$('div').html() // Get HTML\n$('div').html('<b>Bold</b>') // Set HTML\n\n// Get/set value (form inputs)\n$('input').val() // Get value\n$('input').val('New value') // Set value\n\n// Get/set attributes\n$('img').attr('src') // Get attribute\n$('img').attr('src', 'new.jpg') // Set attribute\n$('img').attr({ src: 'new.jpg', alt: 'Image' }) // Set multiple\n\n// Remove attribute\n$('input').removeAttr('disabled')\n\n// Data attributes\n$('div').data('id') // Get data-id\n$('div').data('id', 123) // Set data-id\n\n// CSS properties\n$('p').css('color') // Get CSS property\n$('p').css('color', 'red') // Set single property\n$('p').css({ color: 'red', fontSize: '16px' }) // Set multiple\n\n// Classes\n$('div').addClass('active')\n$('div').removeClass('active')\n$('div').toggleClass('active')\n$('div').hasClass('active') // true/false\n\n// Add multiple classes\n$('div').addClass('class1 class2')",
+            code: "// Get/set text\n$('p').text()           // Get text\n$('p').text('New text') // Set text\n\n// Get/set HTML\n$('div').html()              // Get HTML\n$('div').html('<b>Bold</b>') // Set HTML\n\n// Get/set value (form inputs)\n$('input').val()            // Get value\n$('input').val('New value') // Set value\n\n// Get/set attributes\n$('img').attr('src')                            // Get attribute\n$('img').attr('src', 'new.jpg')                 // Set attribute\n$('img').attr({ src: 'new.jpg', alt: 'Image' }) // Set multiple\n\n// Remove attribute\n$('input').removeAttr('disabled')\n\n// Data attributes\n$('div').data('id')      // Get data-id\n$('div').data('id', 123) // Set data-id\n\n// CSS properties\n$('p').css('color')                            // Get CSS property\n$('p').css('color', 'red')                     // Set single property\n$('p').css({ color: 'red', fontSize: '16px' }) // Set multiple\n\n// Classes\n$('div').addClass('active')\n$('div').removeClass('active')\n$('div').toggleClass('active')\n$('div').hasClass('active') // true/false\n\n// Add multiple classes\n$('div').addClass('class1 class2')",
           },
         ],
       },
@@ -5186,7 +5186,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// Parent\n$('p').parent()\n$('p').parents() // All ancestors\n$('p').parentsUntil('div') // Ancestors until selector\n\n// Children\n$('div').children()\n$('div').children('p') // Only p children\n\n// Siblings\n$('p').siblings()\n$('p').next() // Next sibling\n$('p').prev() // Previous sibling\n$('p').nextAll()\n$('p').prevAll()\n\n// Find descendants\n$('div').find('p')\n$('div').find('.myClass')\n\n// Closest ancestor matching selector\n$('span').closest('div')\n\n// First/last\n$('li').first()\n$('li').last()\n\n// Filter\n$('li').filter('.active')\n$('li').not('.active')\n\n// Each (loop through elements)\n$('li').each(function (index, element) {\n  console.log(index, $(element).text())\n})",
+            code: "// Parent\n$('p').parent()\n$('p').parents()           // All ancestors\n$('p').parentsUntil('div') // Ancestors until selector\n\n// Children\n$('div').children()\n$('div').children('p') // Only p children\n\n// Siblings\n$('p').siblings()\n$('p').next() // Next sibling\n$('p').prev() // Previous sibling\n$('p').nextAll()\n$('p').prevAll()\n\n// Find descendants\n$('div').find('p')\n$('div').find('.myClass')\n\n// Closest ancestor matching selector\n$('span').closest('div')\n\n// First/last\n$('li').first()\n$('li').last()\n\n// Filter\n$('li').filter('.active')\n$('li').not('.active')\n\n// Each (loop through elements)\n$('li').each(function (index, element) {\n  console.log(index, $(element).text())\n})",
           },
         ],
       },
@@ -5197,7 +5197,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// Click event\n$('button').click(function () {\n  console.log('Clicked!')\n})\n\n// Modern way (on method)\n$('button').on('click', function () {\n  console.log('Clicked!')\n})\n\n// Common events\n$('button').click(handler)\n$('input').focus(handler)\n$('input').blur(handler)\n$('input').change(handler)\n$('input').keyup(handler)\n$('input').keydown(handler)\n$('form').submit(handler)\n$('div').mouseenter(handler)\n$('div').mouseleave(handler)\n$('div').mouseover(handler)\n$('div').hover(handlerIn, handlerOut)\n$(window).resize(handler)\n$(window).scroll(handler)\n$(document).ready(handler)\n\n// Event object\n$('button').click(function (event) {\n  event.preventDefault() // Prevent default action\n  event.stopPropagation() // Stop event bubbling\n  console.log(event.target) // Element that triggered event\n})\n\n// Pass data to handler\n$('button').on('click', { name: 'John' }, function (event) {\n  console.log(event.data.name)\n})\n\n// Multiple events at once\n$('input').on('focus blur', function () {\n  console.log('Focus or blur')\n})\n\n// Namespaced events\n$('button').on('click.myPlugin', handler)\n$('button').off('click.myPlugin') // Remove only this namespace\n\n// Event delegation (for dynamically added elements)\n$('#container').on('click', '.dynamic-item', function () {\n  console.log('Dynamic item clicked')\n})\n\n// Remove event handler\n$('button').off('click')\n$('button').off('click', specificHandler)\n\n// Trigger event programmatically\n$('button').trigger('click')\n$('button').click() // Shorthand\n\n// One-time event\n$('button').one('click', function () {\n  console.log('Only fires once')\n})",
+            code: "// Click event\n$('button').click(function () {\n  console.log('Clicked!')\n})\n\n// Modern way (on method)\n$('button').on('click', function () {\n  console.log('Clicked!')\n})\n\n// Common events\n$('button').click(handler)\n$('input').focus(handler)\n$('input').blur(handler)\n$('input').change(handler)\n$('input').keyup(handler)\n$('input').keydown(handler)\n$('form').submit(handler)\n$('div').mouseenter(handler)\n$('div').mouseleave(handler)\n$('div').mouseover(handler)\n$('div').hover(handlerIn, handlerOut)\n$(window).resize(handler)\n$(window).scroll(handler)\n$(document).ready(handler)\n\n// Event object\n$('button').click(function (event) {\n  event.preventDefault()    // Prevent default action\n  event.stopPropagation()   // Stop event bubbling\n  console.log(event.target) // Element that triggered event\n})\n\n// Pass data to handler\n$('button').on('click', { name: 'John' }, function (event) {\n  console.log(event.data.name)\n})\n\n// Multiple events at once\n$('input').on('focus blur', function () {\n  console.log('Focus or blur')\n})\n\n// Namespaced events\n$('button').on('click.myPlugin', handler)\n$('button').off('click.myPlugin') // Remove only this namespace\n\n// Event delegation (for dynamically added elements)\n$('#container').on('click', '.dynamic-item', function () {\n  console.log('Dynamic item clicked')\n})\n\n// Remove event handler\n$('button').off('click')\n$('button').off('click', specificHandler)\n\n// Trigger event programmatically\n$('button').trigger('click')\n$('button').click() // Shorthand\n\n// One-time event\n$('button').one('click', function () {\n  console.log('Only fires once')\n})",
           },
         ],
       },
@@ -5230,7 +5230,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// Get form values\n$('#username').val()\n$('form').serialize() // All form data as query string\n$('form').serializeArray() // All form data as array of objects\n\n// Set form values\n$('#username').val('John')\n\n// Submit form\n$('form').submit(function (event) {\n  event.preventDefault()\n  var username = $('#username').val()\n  console.log(username)\n})\n\n// Checkbox/radio\n$(\"input[type='checkbox']\").is(':checked')\n$(\"input[name='gender']:checked\").val()\n\n// Select dropdown\n$('select').val() // Get selected value\n$('select').val('option2') // Set selected value\n$('select option:selected').text() // Get selected text\n\n// Reset form\n$('form')[0].reset()\n\n// Disable/enable form elements\n$('input').prop('disabled', true)\n$('input').prop('disabled', false)\n\n// Form validation example\n$('form').submit(function (event) {\n  var email = $('#email').val()\n  if (email === '') {\n    alert('Email is required')\n    event.preventDefault()\n  }\n})",
+            code: "// Get form values\n$('#username').val()\n$('form').serialize()      // All form data as query string\n$('form').serializeArray() // All form data as array of objects\n\n// Set form values\n$('#username').val('John')\n\n// Submit form\n$('form').submit(function (event) {\n  event.preventDefault()\n  var username = $('#username').val()\n  console.log(username)\n})\n\n// Checkbox/radio\n$(\"input[type='checkbox']\").is(':checked')\n$(\"input[name='gender']:checked\").val()\n\n// Select dropdown\n$('select').val()                  // Get selected value\n$('select').val('option2')         // Set selected value\n$('select option:selected').text() // Get selected text\n\n// Reset form\n$('form')[0].reset()\n\n// Disable/enable form elements\n$('input').prop('disabled', true)\n$('input').prop('disabled', false)\n\n// Form validation example\n$('form').submit(function (event) {\n  var email = $('#email').val()\n  if (email === '') {\n    alert('Email is required')\n    event.preventDefault()\n  }\n})",
           },
         ],
       },
@@ -5241,7 +5241,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// Width/height\n$('div').width() // Get width (content only)\n$('div').height() // Get height (content only)\n$('div').innerWidth() // Width + padding\n$('div').innerHeight() // Height + padding\n$('div').outerWidth() // Width + padding + border\n$('div').outerHeight() // Height + padding + border\n$('div').outerWidth(true) // Width + padding + border + margin\n\n// Set width/height\n$('div').width(200)\n$('div').height(100)\n\n// Position\n$('div').position() // Position relative to parent\n$('div').offset() // Position relative to document\n\n// Scroll position\n$(window).scrollTop() // Get scroll position\n$(window).scrollTop(0) // Scroll to top\n$('html, body').animate({ scrollTop: 0 }, 500) // Smooth scroll to top\n\n// Document/window dimensions\n$(document).width()\n$(document).height()\n$(window).width()\n$(window).height()",
+            code: "// Width/height\n$('div').width()          // Get width (content only)\n$('div').height()         // Get height (content only)\n$('div').innerWidth()     // Width + padding\n$('div').innerHeight()    // Height + padding\n$('div').outerWidth()     // Width + padding + border\n$('div').outerHeight()    // Height + padding + border\n$('div').outerWidth(true) // Width + padding + border + margin\n\n// Set width/height\n$('div').width(200)\n$('div').height(100)\n\n// Position\n$('div').position() // Position relative to parent\n$('div').offset()   // Position relative to document\n\n// Scroll position\n$(window).scrollTop()                          // Get scroll position\n$(window).scrollTop(0)                         // Scroll to top\n$('html, body').animate({ scrollTop: 0 }, 500) // Smooth scroll to top\n\n// Document/window dimensions\n$(document).width()\n$(document).height()\n$(window).width()\n$(window).height()",
           },
         ],
       },
@@ -5263,7 +5263,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "// Check if element exists\nif ($('#element').length > 0) {\n  console.log('Element exists')\n}\nif ($('#element').length) {\n  console.log('Element exists')\n}\n\n// Iterate over array/object\n$.each([1, 2, 3], function (index, value) {\n  console.log(index, value)\n})\n\n$.each({ a: 1, b: 2 }, function (key, value) {\n  console.log(key, value)\n})\n\n// Extend objects (merge)\nvar obj1 = { a: 1 }\nvar obj2 = { b: 2 }\nvar merged = $.extend({}, obj1, obj2) // { a: 1, b: 2 }\n\n// Check type\n$.isArray([1, 2, 3]) // true\n$.isFunction(function () {}) // true\n$.isEmptyObject({}) // true\n\n// Trim string\n$.trim('  hello  ') // \"hello\"\n\n// Parse JSON\n$.parseJSON('{\"name\": \"John\"}')\n\n// Map array\n$.map([1, 2, 3], function (value) {\n  return value * 2\n}) // [2, 4, 6]\n\n// Grep (filter array)\n$.grep([1, 2, 3, 4], function (value) {\n  return value > 2\n}) // [3, 4]\n\n// No conflict mode (avoid $ conflicts with other libraries)\nvar jq = $.noConflict()",
+            code: "// Check if element exists\nif ($('#element').length > 0) {\n  console.log('Element exists')\n}\nif ($('#element').length) {\n  console.log('Element exists')\n}\n\n// Iterate over array/object\n$.each([1, 2, 3], function (index, value) {\n  console.log(index, value)\n})\n\n$.each({ a: 1, b: 2 }, function (key, value) {\n  console.log(key, value)\n})\n\n// Extend objects (merge)\nvar obj1 = { a: 1 }\nvar obj2 = { b: 2 }\nvar merged = $.extend({}, obj1, obj2) // { a: 1, b: 2 }\n\n// Check type\n$.isArray([1, 2, 3])         // true\n$.isFunction(function () {}) // true\n$.isEmptyObject({})          // true\n\n// Trim string\n$.trim('  hello  ') // \"hello\"\n\n// Parse JSON\n$.parseJSON('{\"name\": \"John\"}')\n\n// Map array\n$.map([1, 2, 3], function (value) {\n  return value * 2\n}) // [2, 4, 6]\n\n// Grep (filter array)\n$.grep([1, 2, 3, 4], function (value) {\n  return value > 2\n}) // [3, 4]\n\n// No conflict mode (avoid $ conflicts with other libraries)\nvar jq = $.noConflict()",
           },
         ],
       },
@@ -5818,7 +5818,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'go',
-            code: '// Integer types\nvar i int = 42                                         // Platform dependent (32 or 64 bit)\nvar i8 int8 = 127                                      // 8-bit\nvar i16 int16 = 32767                                  // 16-bit\nvar i32 int32 = 2147483647 // 32-bit\nvar i64 int64 = 9223372036854775807                    // 64-bit\nvar u uint = 42                                        // Unsigned integer\n\n// Floating point types\nvar f32 float32 = 3.14\nvar f64 float64 = 3.14159265358979\n\n// Boolean\nvar isTrue bool = true\n\n// String\nvar text string = "Hello World"\n\n// Rune (represents a character, alias for int32)\nvar r rune = \'A\'\n\n// Byte (alias for uint8)\nvar b byte = 255\n\n// Type conversion (explicit, no implicit conversion in Go)\nvar d float64 = 3.99\nvar i2 int = int(d)                                    // 3 (truncates)\nvar f float64 = float64(42)\n\n// Type checking with reflection\nimport "reflect"\nreflect.TypeOf(42)                                     // int',
+            code: '// Integer types\nvar i int = 42                      // Platform dependent (32 or 64 bit)\nvar i8 int8 = 127                   // 8-bit\nvar i16 int16 = 32767               // 16-bit\nvar i32 int32 = 2147483647          // 32-bit\nvar i64 int64 = 9223372036854775807 // 64-bit\nvar u uint = 42                     // Unsigned integer\n\n// Floating point types\nvar f32 float32 = 3.14\nvar f64 float64 = 3.14159265358979\n\n// Boolean\nvar isTrue bool = true\n\n// String\nvar text string = "Hello World"\n\n// Rune (represents a character, alias for int32)\nvar r rune = \'A\'\n\n// Byte (alias for uint8)\nvar b byte = 255\n\n// Type conversion (explicit, no implicit conversion in Go)\nvar d float64 = 3.99\nvar i2 int = int(d)                                    // 3 (truncates)\nvar f float64 = float64(42)\n\n// Type checking with reflection\nimport "reflect"\nreflect.TypeOf(42)                                     // int',
           },
         ],
       },
@@ -6320,7 +6320,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'rust',
-            code: '// Math operations\nlet sum = 5 + 3;\nlet diff = 5 - 3;\nlet product = 5 * 3;\nlet quotient = 6 / 3;\nlet remainder = 7 % 3;\n\n// Increment (no ++/-- in Rust)\nlet mut count = 0;\ncount += 1;\ncount -= 1;\n\n// Math methods\n(-5_i32).abs();\n(3.7_f64).round();\n(3.3_f64).ceil();\n(3.7_f64).floor();\nstd::cmp::max(1, 5);\nstd::cmp::min(1, 5);\n(16.0_f64).sqrt();\n(2.0_f64).powi(3);                                     // 8.0 (integer power)\n(2.0_f64).powf(0.5);                                   // Float power\n\n// Random numbers (needs rand crate)\n// cargo add rand\nuse rand::Rng;\nlet mut rng = rand::thread_rng();\nlet n: i32 = rng.gen_range(1..100);\n\n// Overflow-checked arithmetic\nlet result = 5i32.checked_add(3);                      // Some(8)\nlet result2 = i32::MAX.checked_add(1); // None (overflow)',
+            code: '// Math operations\nlet sum = 5 + 3;\nlet diff = 5 - 3;\nlet product = 5 * 3;\nlet quotient = 6 / 3;\nlet remainder = 7 % 3;\n\n// Increment (no ++/-- in Rust)\nlet mut count = 0;\ncount += 1;\ncount -= 1;\n\n// Math methods\n(-5_i32).abs();\n(3.7_f64).round();\n(3.3_f64).ceil();\n(3.7_f64).floor();\nstd::cmp::max(1, 5);\nstd::cmp::min(1, 5);\n(16.0_f64).sqrt();\n(2.0_f64).powi(3);                                     // 8.0 (integer power)\n(2.0_f64).powf(0.5);                                   // Float power\n\n// Random numbers (needs rand crate)\n// cargo add rand\nuse rand::Rng;\nlet mut rng = rand::thread_rng();\nlet n: i32 = rng.gen_range(1..100);\n\n// Overflow-checked arithmetic\nlet result = 5i32.checked_add(3);      // Some(8)\nlet result2 = i32::MAX.checked_add(1); // None (overflow)',
           },
         ],
       },
@@ -6408,7 +6408,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'rust',
-            code: '// Ownership: each value has one owner\nlet s1 = String::from("hello");\nlet s2 = s1;                                           // s1 is moved, no longer valid\n// println!("{}", s1);          // Error! s1 was moved\n\n// Clone (deep copy)\nlet s3 = String::from("hello");\nlet s4 = s3.clone();                                   // Both valid\nprintln!("{} {}", s3, s4);\n\n// References (borrowing, doesn\'t take ownership)\nfn calculate_length(s: &String) -> usize {\n    s.len()\n}\nlet s5 = String::from("hello");\nlet len = calculate_length(&s5);                       // Borrow, s5 still valid\n\n// Mutable references\nfn append_world(s: &mut String) {\n    s.push_str(" world");\n}\nlet mut s6 = String::from("hello");\nappend_world(&mut s6);\n\n// Rules: only one mutable reference OR any number of immutable references\nlet mut s7 = String::from("hello");\nlet r1 = &s7;                                          // OK\nlet r2 = &s7;                                          // OK, multiple immutable\n// let r3 = &mut s7;                // Error! Can\'t mix with mutable\n\n// Slices (reference to part of a collection)\nlet s8 = String::from("hello world");\nlet hello = &s8[0..5];\nlet world = &s8[6..11];\n\nlet arr = [1, 2, 3, 4, 5];\nlet slice = &arr[1..3];',
+            code: '// Ownership: each value has one owner\nlet s1 = String::from("hello");\nlet s2 = s1;           // s1 is moved, no longer valid\n// println!("{}", s1); // Error! s1 was moved\n\n// Clone (deep copy)\nlet s3 = String::from("hello");\nlet s4 = s3.clone();                                   // Both valid\nprintln!("{} {}", s3, s4);\n\n// References (borrowing, doesn\'t take ownership)\nfn calculate_length(s: &String) -> usize {\n    s.len()\n}\nlet s5 = String::from("hello");\nlet len = calculate_length(&s5);                       // Borrow, s5 still valid\n\n// Mutable references\nfn append_world(s: &mut String) {\n    s.push_str(" world");\n}\nlet mut s6 = String::from("hello");\nappend_world(&mut s6);\n\n// Rules: only one mutable reference OR any number of immutable references\nlet mut s7 = String::from("hello");\nlet r1 = &s7;        // OK\nlet r2 = &s7;        // OK, multiple immutable\n// let r3 = &mut s7; // Error! Can\'t mix with mutable\n\n// Slices (reference to part of a collection)\nlet s8 = String::from("hello world");\nlet hello = &s8[0..5];\nlet world = &s8[6..11];\n\nlet arr = [1, 2, 3, 4, 5];\nlet slice = &arr[1..3];',
           },
         ],
       },
@@ -6553,7 +6553,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'lua',
-            code: 'local text = "Hello World"\n\n-- Length\n#text                        -- 11\nstring.len(text)                                       -- 11\n\n-- Case\nstring.upper(text)                                     -- "HELLO WORLD"\nstring.lower(text)                                     -- "hello world"\n\n-- Substring\nstring.sub(text, 1, 5)                                 -- "Hello" (1-indexed!)\nstring.sub(text, 7)                                    -- "World"\nstring.sub(text, -5)                                   -- "World" (negative from end)\n\n-- Find\nstring.find(text, "World")                             -- 7, 11 (start, end)\n\n-- Replace\nstring.gsub(text, "World", "Lua")                      -- "Hello Lua", 1 (count)\n\n-- Format (like printf)\nstring.format("Name: %s, Age: %d", "John", 30)\nstring.format("%.2f", 3.14159)                         -- "3.14"\n\n-- Split-like pattern (Lua has no built-in split)\nfor word in string.gmatch(text, "%a+") do\n    print(word)\nend\n\n-- Repeat\nstring.rep("Ha", 3)                                    -- "HaHaHa"\n\n-- Reverse\nstring.reverse(text)                                   -- "dlroW olleH"\n\n-- Trim (no built-in, common pattern)\nlocal function trim(s)\n    return s:match("^%s*(.-)%s*$")\nend\n\n-- Concatenation\nlocal full = "Hello" .. " " .. "World"\n\n-- String methods (colon syntax, same as string.X(text, ...))\ntext:upper()\ntext:sub(1, 5)\ntext:find("World")\n\n-- Byte/char conversion\nstring.byte("A")                                       -- 65\nstring.char(65)                                        -- "A"',
+            code: 'local text = "Hello World"\n\n-- Length\n#text            -- 11\nstring.len(text) -- 11\n\n-- Case\nstring.upper(text)                                     -- "HELLO WORLD"\nstring.lower(text)                                     -- "hello world"\n\n-- Substring\nstring.sub(text, 1, 5)                                 -- "Hello" (1-indexed!)\nstring.sub(text, 7)                                    -- "World"\nstring.sub(text, -5)                                   -- "World" (negative from end)\n\n-- Find\nstring.find(text, "World")                             -- 7, 11 (start, end)\n\n-- Replace\nstring.gsub(text, "World", "Lua")                      -- "Hello Lua", 1 (count)\n\n-- Format (like printf)\nstring.format("Name: %s, Age: %d", "John", 30)\nstring.format("%.2f", 3.14159)                         -- "3.14"\n\n-- Split-like pattern (Lua has no built-in split)\nfor word in string.gmatch(text, "%a+") do\n    print(word)\nend\n\n-- Repeat\nstring.rep("Ha", 3)                                    -- "HaHaHa"\n\n-- Reverse\nstring.reverse(text)                                   -- "dlroW olleH"\n\n-- Trim (no built-in, common pattern)\nlocal function trim(s)\n    return s:match("^%s*(.-)%s*$")\nend\n\n-- Concatenation\nlocal full = "Hello" .. " " .. "World"\n\n-- String methods (colon syntax, same as string.X(text, ...))\ntext:upper()\ntext:sub(1, 5)\ntext:find("World")\n\n-- Byte/char conversion\nstring.byte("A")                                       -- 65\nstring.char(65)                                        -- "A"',
           },
         ],
       },
@@ -7409,7 +7409,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'jsx',
-            code: "const styles = StyleSheet.create({\n  container: {\n    flex: 1, // Take all available space\n    flexDirection: 'column', // Default direction (column, not row!)\n    justifyContent: 'center', // Main axis alignment\n    alignItems: 'center', // Cross axis alignment\n  },\n  row: {\n    flexDirection: 'row',\n    justifyContent: 'space-between',\n    alignItems: 'center',\n  },\n  item: {\n    flex: 1, // Grow to fill space\n    flexGrow: 1,\n    flexShrink: 1,\n    flexBasis: 'auto',\n  },\n})\n\n// Common patterns\n;<View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>\n  <View style={{ flex: 1 }}>\n    <Text>Left</Text>\n  </View>\n  <View style={{ flex: 2 }}>\n    <Text>Right (2x width)</Text>\n  </View>\n</View>",
+            code: "const styles = StyleSheet.create({\n  container: {\n    flex: 1,                  // Take all available space\n    flexDirection: 'column',  // Default direction (column, not row!)\n    justifyContent: 'center', // Main axis alignment\n    alignItems: 'center',     // Cross axis alignment\n  },\n  row: {\n    flexDirection: 'row',\n    justifyContent: 'space-between',\n    alignItems: 'center',\n  },\n  item: {\n    flex: 1, // Grow to fill space\n    flexGrow: 1,\n    flexShrink: 1,\n    flexBasis: 'auto',\n  },\n})\n\n// Common patterns\n;<View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>\n  <View style={{ flex: 1 }}>\n    <Text>Left</Text>\n  </View>\n  <View style={{ flex: 2 }}>\n    <Text>Right (2x width)</Text>\n  </View>\n</View>",
           },
         ],
       },
@@ -7420,7 +7420,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'jsx',
-            code: "import { TextInput } from 'react-native'\nimport { useState } from 'react'\n\nfunction LoginForm() {\n  const [username, setUsername] = useState('')\n  const [password, setPassword] = useState('')\n\n  return (\n    <View>\n      <TextInput\n        style={styles.input}\n        placeholder=\"Username\"\n        value={username}\n        onChangeText={setUsername}\n      />\n      <TextInput\n        style={styles.input}\n        placeholder=\"Password\"\n        value={password}\n        onChangeText={setPassword}\n        secureTextEntry={true}\n      />\n    </View>\n  )\n}\n\n// Common TextInput props\n;<TextInput\n  placeholder=\"Enter text\"\n  placeholderTextColor=\"#999\"\n  value={value}\n  onChangeText={(text) => setValue(text)}\n  keyboardType=\"numeric\" // default, numeric, email-address, phone-pad\n  autoCapitalize=\"none\" // none, sentences, words, characters\n  autoCorrect={false}\n  secureTextEntry={true} // For passwords\n  multiline={true}\n  numberOfLines={4}\n  maxLength={50}\n  editable={true}\n  onFocus={() => console.log('Focused')}\n  onBlur={() => console.log('Blurred')}\n  onSubmitEditing={() => console.log('Submitted')}\n/>",
+            code: "import { TextInput } from 'react-native'\nimport { useState } from 'react'\n\nfunction LoginForm() {\n  const [username, setUsername] = useState('')\n  const [password, setPassword] = useState('')\n\n  return (\n    <View>\n      <TextInput\n        style={styles.input}\n        placeholder=\"Username\"\n        value={username}\n        onChangeText={setUsername}\n      />\n      <TextInput\n        style={styles.input}\n        placeholder=\"Password\"\n        value={password}\n        onChangeText={setPassword}\n        secureTextEntry={true}\n      />\n    </View>\n  )\n}\n\n// Common TextInput props\n;<TextInput\n  placeholder=\"Enter text\"\n  placeholderTextColor=\"#999\"\n  value={value}\n  onChangeText={(text) => setValue(text)}\n  keyboardType=\"numeric\" // default, numeric, email-address, phone-pad\n  autoCapitalize=\"none\"  // none, sentences, words, characters\n  autoCorrect={false}\n  secureTextEntry={true} // For passwords\n  multiline={true}\n  numberOfLines={4}\n  maxLength={50}\n  editable={true}\n  onFocus={() => console.log('Focused')}\n  onBlur={() => console.log('Blurred')}\n  onSubmitEditing={() => console.log('Submitted')}\n/>",
           },
         ],
       },
@@ -7865,7 +7865,7 @@ export const refTopics: Record<string, RefTopic> = {
           },
           {
             language: 'powershell',
-            code: '# PowerShell\nGet-Content file.txt                                   # Print entire file (alias: cat, gc)\nGet-Content file.txt -Head 10                          # First 10 lines\nGet-Content file.txt -Tail 10                          # Last 10 lines\nGet-Content file.txt -Wait                             # Follow file (like tail -f)\n\nMeasure-Object -InputObject (Get-Content file.txt) -Line  # Line count\n(Get-Content file.txt).Count                           # Line count (simpler)',
+            code: '# PowerShell\nGet-Content file.txt                                   # Print entire file (alias: cat, gc)\nGet-Content file.txt -Head 10                          # First 10 lines\nGet-Content file.txt -Tail 10                          # Last 10 lines\nGet-Content file.txt -Wait                             # Follow file (like tail -f)\n\nMeasure-Object -InputObject (Get-Content file.txt) -Line # Line count\n(Get-Content file.txt).Count                             # Line count (simpler)',
           },
         ],
       },
@@ -7880,7 +7880,7 @@ export const refTopics: Record<string, RefTopic> = {
           },
           {
             language: 'powershell',
-            code: '# PowerShell\nGet-ChildItem -Recurse -Filter "*.txt"                 # Find files by name\nGet-Command python                                     # Find command location\n\nSelect-String "search" file.txt                        # Search for text (like grep)\nSelect-String -Pattern "search" -Path *.txt -CaseSensitive\nSelect-String -Pattern "search" -Path * -Recurse       # Recursive search\nGet-ChildItem -Recurse -Filter "*.js" | Select-String "TODO"  # Combine find + search\n\n# Get file/folder size\nGet-ChildItem | Measure-Object -Property Length -Sum\n(Get-Item file.txt).Length',
+            code: '# PowerShell\nGet-ChildItem -Recurse -Filter "*.txt"                 # Find files by name\nGet-Command python                                     # Find command location\n\nSelect-String "search" file.txt                        # Search for text (like grep)\nSelect-String -Pattern "search" -Path *.txt -CaseSensitive\nSelect-String -Pattern "search" -Path * -Recurse             # Recursive search\nGet-ChildItem -Recurse -Filter "*.js" | Select-String "TODO" # Combine find + search\n\n# Get file/folder size\nGet-ChildItem | Measure-Object -Property Length -Sum\n(Get-Item file.txt).Length',
           },
         ],
       },
@@ -8015,7 +8015,7 @@ export const refTopics: Record<string, RefTopic> = {
           },
           {
             language: 'powershell',
-            code: '# PowerShell (much more powerful text processing)\nGet-Content file.txt | Sort-Object                     # Sort lines\nGet-Content file.txt | Sort-Object -Descending         # Reverse order\nGet-Content file.txt | Sort-Object -Unique             # Sort and remove duplicates\n\nCompare-Object (Get-Content file1.txt) (Get-Content file2.txt)  # Like diff\n\nGet-Content file.txt | ForEach-Object { $_ -replace "old", "new" }  # Find/replace\n(Get-Content file.txt) -replace "old", "new" | Set-Content file.txt  # Replace in-place\n\nGet-Content file.txt | Measure-Object -Line -Word -Character  # Like wc\n\n# Extract columns (like cut/awk)\nGet-Content file.txt | ForEach-Object { ($_ -split ",")[0] }\n\n# Group and count (like uniq -c)\nGet-Content file.txt | Group-Object | Select-Object Name, Count',
+            code: '# PowerShell (much more powerful text processing)\nGet-Content file.txt | Sort-Object                     # Sort lines\nGet-Content file.txt | Sort-Object -Descending         # Reverse order\nGet-Content file.txt | Sort-Object -Unique             # Sort and remove duplicates\n\nCompare-Object (Get-Content file1.txt) (Get-Content file2.txt)  # Like diff\n\nGet-Content file.txt | ForEach-Object { $_ -replace "old", "new" }  # Find/replace\n(Get-Content file.txt) -replace "old", "new" | Set-Content file.txt # Replace in-place\n\nGet-Content file.txt | Measure-Object -Line -Word -Character  # Like wc\n\n# Extract columns (like cut/awk)\nGet-Content file.txt | ForEach-Object { ($_ -split ",")[0] }\n\n# Group and count (like uniq -c)\nGet-Content file.txt | Group-Object | Select-Object Name, Count',
           },
         ],
       },
@@ -8045,7 +8045,7 @@ export const refTopics: Record<string, RefTopic> = {
           },
           {
             language: 'powershell',
-            code: '# PowerShell\nGet-Service                                            # List all services\nGet-Service -Name "ServiceName"                        # Get specific service status\nStart-Service -Name "ServiceName"                      # Start service\nStop-Service -Name "ServiceName"                       # Stop service\nRestart-Service -Name "ServiceName"                    # Restart service\nSet-Service -Name "ServiceName" -StartupType Automatic  # Set startup type',
+            code: '# PowerShell\nGet-Service                                            # List all services\nGet-Service -Name "ServiceName"                        # Get specific service status\nStart-Service -Name "ServiceName"                      # Start service\nStop-Service -Name "ServiceName"                       # Stop service\nRestart-Service -Name "ServiceName"                    # Restart service\nSet-Service -Name "ServiceName" -StartupType Automatic # Set startup type',
           },
         ],
       },
@@ -8187,7 +8187,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'python',
-            code: "df.sort_values('age')                                  # Ascending by column\ndf.sort_values('age', ascending=False)                 # Descending\ndf.sort_values(['city', 'age'])                        # Multiple columns\ndf.sort_values(['city', 'age'], ascending=[True, False])  # Mixed order\n\ndf.sort_index()                                        # Sort by index\ndf.sort_index(ascending=False)\n\ndf['rank'] = df['age'].rank()                          # Rank values\ndf['rank'] = df['age'].rank(ascending=False)",
+            code: "df.sort_values('age')                                    # Ascending by column\ndf.sort_values('age', ascending=False)                   # Descending\ndf.sort_values(['city', 'age'])                          # Multiple columns\ndf.sort_values(['city', 'age'], ascending=[True, False]) # Mixed order\n\ndf.sort_index()                                        # Sort by index\ndf.sort_index(ascending=False)\n\ndf['rank'] = df['age'].rank()                          # Rank values\ndf['rank'] = df['age'].rank(ascending=False)",
           },
         ],
       },
@@ -8672,7 +8672,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'jsx',
-            code: "// Basic fetch (Server Component)\nasync function Page() {\n  const res = await fetch('https://api.example.com/posts')\n  const posts = await res.json()\n\n  return (\n    <ul>\n      {posts.map((post) => (\n        <li key={post.id}>{post.title}</li>\n      ))}\n    </ul>\n  )\n}\n\n// Caching behavior\nfetch(url, { cache: 'force-cache' }) // Default, cached indefinitely\nfetch(url, { cache: 'no-store' }) // Never cache (dynamic data)\nfetch(url, { next: { revalidate: 60 } }) // Revalidate every 60 seconds (ISR)\n\n// Fetching multiple resources in parallel\nasync function Page() {\n  const [users, posts] = await Promise.all([\n    fetch('https://api.example.com/users').then((r) => r.json()),\n    fetch('https://api.example.com/posts').then((r) => r.json()),\n  ])\n\n  return <div>{/* use users and posts */}</div>\n}\n\n// Fetching in Client Components (use useEffect or SWR/React Query)\n;('use client')\nimport { useState, useEffect } from 'react'\n\nfunction ClientDataComponent() {\n  const [data, setData] = useState(null)\n\n  useEffect(() => {\n    fetch('/api/data')\n      .then((res) => res.json())\n      .then(setData)\n  }, [])\n\n  return <div>{data?.title}</div>\n}",
+            code: "// Basic fetch (Server Component)\nasync function Page() {\n  const res = await fetch('https://api.example.com/posts')\n  const posts = await res.json()\n\n  return (\n    <ul>\n      {posts.map((post) => (\n        <li key={post.id}>{post.title}</li>\n      ))}\n    </ul>\n  )\n}\n\n// Caching behavior\nfetch(url, { cache: 'force-cache' })     // Default, cached indefinitely\nfetch(url, { cache: 'no-store' })        // Never cache (dynamic data)\nfetch(url, { next: { revalidate: 60 } }) // Revalidate every 60 seconds (ISR)\n\n// Fetching multiple resources in parallel\nasync function Page() {\n  const [users, posts] = await Promise.all([\n    fetch('https://api.example.com/users').then((r) => r.json()),\n    fetch('https://api.example.com/posts').then((r) => r.json()),\n  ])\n\n  return <div>{/* use users and posts */}</div>\n}\n\n// Fetching in Client Components (use useEffect or SWR/React Query)\n;('use client')\nimport { useState, useEffect } from 'react'\n\nfunction ClientDataComponent() {\n  const [data, setData] = useState(null)\n\n  useEffect(() => {\n    fetch('/api/data')\n      .then((res) => res.json())\n      .then(setData)\n  }, [])\n\n  return <div>{data?.title}</div>\n}",
           },
         ],
       },
@@ -8880,7 +8880,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "app.get('/example', (req, res) => {\n  req.params // Route parameters (/users/:id)\n  req.query // Query string (?key=value)\n  req.body // Request body (needs express.json())\n  req.headers // Request headers\n  req.method // HTTP method\n  req.url // Request URL\n  req.path // Path only\n  req.ip // Client IP address\n  req.cookies // Cookies (needs cookie-parser)\n  req.get('User-Agent') // Get specific header\n})\n\n// Query parameters example\n// GET /search?q=hello&limit=10\napp.get('/search', (req, res) => {\n  const { q, limit } = req.query\n  res.send(`Searching for \"${q}\" with limit ${limit}`)\n})",
+            code: "app.get('/example', (req, res) => {\n  req.params            // Route parameters (/users/:id)\n  req.query             // Query string (?key=value)\n  req.body              // Request body (needs express.json())\n  req.headers           // Request headers\n  req.method            // HTTP method\n  req.url               // Request URL\n  req.path              // Path only\n  req.ip                // Client IP address\n  req.cookies           // Cookies (needs cookie-parser)\n  req.get('User-Agent') // Get specific header\n})\n\n// Query parameters example\n// GET /search?q=hello&limit=10\napp.get('/search', (req, res) => {\n  const { q, limit } = req.query\n  res.send(`Searching for \"${q}\" with limit ${limit}`)\n})",
           },
         ],
       },
@@ -8891,7 +8891,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "app.get('/example', (req, res) => {\n  res.send('text or HTML') // Send text/HTML response\n  res.json({ key: 'value' }) // Send JSON response\n  res.status(404).send('Not Found') // Set status code\n  res.status(201).json({ created: true }) // Status + JSON\n  res.sendFile('/path/to/file.pdf') // Send a file\n  res.download('/path/to/file.pdf') // Trigger download\n  res.redirect('/home') // Redirect\n  res.redirect(301, '/new-location') // Permanent redirect\n  res.render('view', { data: 'value' }) // Render template\n  res.cookie('name', 'value') // Set cookie\n  res.clearCookie('name') // Clear cookie\n  res.set('X-Custom-Header', 'value') // Set header\n  res.type('json') // Set content type\n  res.end() // End response, no data\n})\n\n// Chaining\napp.get('/chain', (req, res) => {\n  res.status(200).set('X-Custom', 'value').json({ ok: true })\n})",
+            code: "app.get('/example', (req, res) => {\n  res.send('text or HTML')                // Send text/HTML response\n  res.json({ key: 'value' })              // Send JSON response\n  res.status(404).send('Not Found')       // Set status code\n  res.status(201).json({ created: true }) // Status + JSON\n  res.sendFile('/path/to/file.pdf')       // Send a file\n  res.download('/path/to/file.pdf')       // Trigger download\n  res.redirect('/home')                   // Redirect\n  res.redirect(301, '/new-location')      // Permanent redirect\n  res.render('view', { data: 'value' })   // Render template\n  res.cookie('name', 'value')             // Set cookie\n  res.clearCookie('name')                 // Clear cookie\n  res.set('X-Custom-Header', 'value')     // Set header\n  res.type('json')                        // Set content type\n  res.end()                               // End response, no data\n})\n\n// Chaining\napp.get('/chain', (req, res) => {\n  res.status(200).set('X-Custom', 'value').json({ ok: true })\n})",
           },
         ],
       },
@@ -8958,7 +8958,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'javascript',
-            code: "app.use(express.json()) // Parse application/json\napp.use(express.urlencoded({ extended: true })) // Parse form data\napp.use(express.text()) // Parse text/plain\napp.use(express.raw()) // Parse raw buffers\n\n// Limit body size\napp.use(express.json({ limit: '10mb' }))\n\n// Using body-parser (legacy, mostly built into express now)\nconst bodyParser = require('body-parser')\napp.use(bodyParser.json())",
+            code: "app.use(express.json())                         // Parse application/json\napp.use(express.urlencoded({ extended: true })) // Parse form data\napp.use(express.text())                         // Parse text/plain\napp.use(express.raw())                          // Parse raw buffers\n\n// Limit body size\napp.use(express.json({ limit: '10mb' }))\n\n// Using body-parser (legacy, mostly built into express now)\nconst bodyParser = require('body-parser')\napp.use(bodyParser.json())",
           },
         ],
       },
@@ -9089,7 +9089,7 @@ export const refTopics: Record<string, RefTopic> = {
           },
           {
             language: 'javascript',
-            code: "const cors = require('cors')\n\napp.use(cors()) // Allow all origins\napp.use(cors({ origin: 'http://localhost:3000' })) // Specific origin\napp.use(\n  cors({\n    origin: ['http://localhost:3000', 'https://example.com'],\n    methods: ['GET', 'POST', 'PUT', 'DELETE'],\n    credentials: true,\n  }),\n)\n\n// Per-route CORS\napp.get('/api/data', cors(), (req, res) => {\n  res.json({ data: 'value' })\n})",
+            code: "const cors = require('cors')\n\napp.use(cors())                                    // Allow all origins\napp.use(cors({ origin: 'http://localhost:3000' })) // Specific origin\napp.use(\n  cors({\n    origin: ['http://localhost:3000', 'https://example.com'],\n    methods: ['GET', 'POST', 'PUT', 'DELETE'],\n    credentials: true,\n  }),\n)\n\n// Per-route CORS\napp.get('/api/data', cors(), (req, res) => {\n  res.json({ data: 'value' })\n})",
           },
         ],
       },
@@ -9104,7 +9104,7 @@ export const refTopics: Record<string, RefTopic> = {
           },
           {
             language: 'javascript',
-            code: "const rateLimit = require('express-rate-limit')\n\nconst limiter = rateLimit({\n  windowMs: 15 * 60 * 1000, // 15 minutes\n  max: 100, // Limit each IP to 100 requests\n  message: 'Too many requests, please try again later',\n})\n\napp.use(limiter)\napp.use('/api/', limiter) // Only on API routes",
+            code: "const rateLimit = require('express-rate-limit')\n\nconst limiter = rateLimit({\n  windowMs: 15 * 60 * 1000, // 15 minutes\n  max: 100,                 // Limit each IP to 100 requests\n  message: 'Too many requests, please try again later',\n})\n\napp.use(limiter)\napp.use('/api/', limiter) // Only on API routes",
           },
         ],
       },
@@ -9499,7 +9499,7 @@ export const refTopics: Record<string, RefTopic> = {
         snippets: [
           {
             language: 'python',
-            code: "# models.py\nfrom django.db import models\nfrom django.contrib.auth.models import User\n\nclass Category(models.Model):\n    name = models.CharField(max_length=100)\n\n    def __str__(self):\n        return self.name\n\nclass Post(models.Model):\n    title = models.CharField(max_length=200)\n    content = models.TextField()\n    slug = models.SlugField(unique=True)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    is_published = models.BooleanField(default=False)\n    created_at = models.DateTimeField(auto_now_add=True)  # Set once, on creation\n    updated_at = models.DateTimeField(auto_now=True)   # Updated every save\n    published_date = models.DateField(null=True, blank=True)\n    views = models.IntegerField(default=0)\n    email = models.EmailField(blank=True)\n    website = models.URLField(blank=True)\n    thumbnail = models.ImageField(upload_to='thumbnails/', null=True, blank=True)\n    file = models.FileField(upload_to='files/', null=True, blank=True)\n\n    # Relationships\n    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')\n    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)\n    tags = models.ManyToManyField('Tag', blank=True)\n\n    class Meta:\n        ordering = ['-created_at']\n        verbose_name = 'Blog Post'\n\n    def __str__(self):\n        return self.title\n\n    def get_absolute_url(self):\n        from django.urls import reverse\n        return reverse('post-detail', kwargs={'slug': self.slug})\n\nclass Tag(models.Model):\n    name = models.CharField(max_length=50)\n\nclass Comment(models.Model):\n    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')\n    text = models.TextField()\n    created_at = models.DateTimeField(auto_now_add=True)\n\nclass Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    bio = models.TextField(blank=True)",
+            code: "# models.py\nfrom django.db import models\nfrom django.contrib.auth.models import User\n\nclass Category(models.Model):\n    name = models.CharField(max_length=100)\n\n    def __str__(self):\n        return self.name\n\nclass Post(models.Model):\n    title = models.CharField(max_length=200)\n    content = models.TextField()\n    slug = models.SlugField(unique=True)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    is_published = models.BooleanField(default=False)\n    created_at = models.DateTimeField(auto_now_add=True) # Set once, on creation\n    updated_at = models.DateTimeField(auto_now=True)     # Updated every save\n    published_date = models.DateField(null=True, blank=True)\n    views = models.IntegerField(default=0)\n    email = models.EmailField(blank=True)\n    website = models.URLField(blank=True)\n    thumbnail = models.ImageField(upload_to='thumbnails/', null=True, blank=True)\n    file = models.FileField(upload_to='files/', null=True, blank=True)\n\n    # Relationships\n    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')\n    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)\n    tags = models.ManyToManyField('Tag', blank=True)\n\n    class Meta:\n        ordering = ['-created_at']\n        verbose_name = 'Blog Post'\n\n    def __str__(self):\n        return self.title\n\n    def get_absolute_url(self):\n        from django.urls import reverse\n        return reverse('post-detail', kwargs={'slug': self.slug})\n\nclass Tag(models.Model):\n    name = models.CharField(max_length=50)\n\nclass Comment(models.Model):\n    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')\n    text = models.TextField()\n    created_at = models.DateTimeField(auto_now_add=True)\n\nclass Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    bio = models.TextField(blank=True)",
           },
         ],
       },
@@ -10171,7 +10171,7 @@ export const refTopics: Record<string, RefTopic> = {
         title: 'Basic Types',
         description: 'TypeScript supports all JavaScript types with additional static typing:',
         language: 'typescript',
-        code: '// Primitives\nlet isDone: boolean = false;\nlet age: number = 25;\nlet hex: number = 0xf00d;\nlet name: string = "Alice";\n\n// Arrays\nlet list: number[] = [1, 2, 3];\nlet names: Array<string> = ["Alice", "Bob"]; // Generic syntax\n\n// Tuples (fixed length and types)\nlet person: [string, number];\nperson = ["Alice", 25]; // OK\n// person = [25, "Alice"]; // Error\n\n// Any (disables type checking - use sparingly)\nlet looselyTyped: any = 4;\nlooselyTyped = "maybe a string instead";\nlooselyTyped = false;\n\n// Unknown (safer than any, requires type checking before use)\nlet notSure: unknown = 4;\nif (typeof notSure === "number") {\n  let aNumber: number = notSure;\n}\n\n// Void (usually for functions that don\'t return a value)\nfunction logMessage(msg: string): void {\n  console.log(msg);\n}\n\n// Null and Undefined\nlet u: undefined = undefined;\nlet n: null = null;',
+        code: '// Primitives\nlet isDone: boolean = false;\nlet age: number = 25;\nlet hex: number = 0xf00d;\nlet name: string = "Alice";\n\n// Arrays\nlet list: number[] = [1, 2, 3];\nlet names: Array<string> = ["Alice", "Bob"]; // Generic syntax\n\n// Tuples (fixed length and types)\nlet person: [string, number];\nperson = ["Alice", 25];    // OK\n// person = [25, "Alice"]; // Error\n\n// Any (disables type checking - use sparingly)\nlet looselyTyped: any = 4;\nlooselyTyped = "maybe a string instead";\nlooselyTyped = false;\n\n// Unknown (safer than any, requires type checking before use)\nlet notSure: unknown = 4;\nif (typeof notSure === "number") {\n  let aNumber: number = notSure;\n}\n\n// Void (usually for functions that don\'t return a value)\nfunction logMessage(msg: string): void {\n  console.log(msg);\n}\n\n// Null and Undefined\nlet u: undefined = undefined;\nlet n: null = null;',
       },
       {
         id: 'interfaces',
@@ -10206,7 +10206,7 @@ export const refTopics: Record<string, RefTopic> = {
         title: 'Generics',
         description: 'Reusable components that work with a variety of types:',
         language: 'typescript',
-        code: '// Generic function\nfunction identity<T>(arg: T): T {\n  return arg;\n}\n\nlet output1 = identity<string>("myString");\nlet output2 = identity(42); // Type argument inference\n\n// Generic Interfaces\ninterface Box<T> {\n  value: T;\n}\nlet stringBox: Box<string> = { value: "Hello" };\nlet numberBox: Box<number> = { value: 123 };\n\n// Generic Classes\nclass Queue<T> {\n  private data: T[] = [];\n  push(item: T) { this.data.push(item); }\n  pop(): T | undefined { return this.data.shift(); }\n}\n\n// Generic Constraints\ninterface HasLength {\n  length: number;\n}\nfunction logLength<T extends HasLength>(arg: T): T {\n  console.log(arg.length);\n  return arg;\n}\nlogLength("Hello"); // OK\nlogLength([1, 2, 3]); // OK\n// logLength(42); // Error',
+        code: '// Generic function\nfunction identity<T>(arg: T): T {\n  return arg;\n}\n\nlet output1 = identity<string>("myString");\nlet output2 = identity(42); // Type argument inference\n\n// Generic Interfaces\ninterface Box<T> {\n  value: T;\n}\nlet stringBox: Box<string> = { value: "Hello" };\nlet numberBox: Box<number> = { value: 123 };\n\n// Generic Classes\nclass Queue<T> {\n  private data: T[] = [];\n  push(item: T) { this.data.push(item); }\n  pop(): T | undefined { return this.data.shift(); }\n}\n\n// Generic Constraints\ninterface HasLength {\n  length: number;\n}\nfunction logLength<T extends HasLength>(arg: T): T {\n  console.log(arg.length);\n  return arg;\n}\nlogLength("Hello");   // OK\nlogLength([1, 2, 3]); // OK\n// logLength(42);     // Error',
       },
       {
         id: 'enums',
@@ -10677,7 +10677,7 @@ export const refTopics: Record<string, RefTopic> = {
         title: 'Key-Value Pairs',
         description: 'The most basic building block:',
         language: 'yaml',
-        code: "name: John\ncity: New York\ncountry: USA\n\n# A space after the colon is required\ntitle: Developer # Correct\n# title:Developer      # Wrong, no space after colon\n\n# Keys can have spaces\nfirst name: John\n\n# Quoted keys (useful for special characters)\n'my-key': value\n'another key': value",
+        code: "name: John\ncity: New York\ncountry: USA\n\n# A space after the colon is required\ntitle: Developer  # Correct\n# title:Developer # Wrong, no space after colon\n\n# Keys can have spaces\nfirst name: John\n\n# Quoted keys (useful for special characters)\n'my-key': value\n'another key': value",
       },
       {
         id: 'data-types',
@@ -10691,7 +10691,7 @@ export const refTopics: Record<string, RefTopic> = {
         title: 'Strings',
         description: 'Different ways to write text:',
         language: 'yaml',
-        code: "# Plain (no quotes needed for simple text)\nname: John Smith\n\n# Double quotes (supports escape characters)\nmessage: \"Line 1\\nLine 2\"\ntab: \"Column1\\tColumn2\"\nquote: 'She said \"hello\"'\nunicode: \"\\u00A9\"\n\n# Single quotes (no escapes, use '' for a literal single quote)\npath: 'C:\\Users\\John'\napostrophe: \"It's fine\"\n\n# When you MUST use quotes\ncolon_text: 'key: value' # Contains a colon\nhash_text: 'Use # for comments' # Contains a hash\nnumber_string: '123' # Keeps it a string, not a number\nbool_string: 'true' # Keeps it a string, not a boolean\nversion: '1.0' # Prevents it being read as a number",
+        code: "# Plain (no quotes needed for simple text)\nname: John Smith\n\n# Double quotes (supports escape characters)\nmessage: \"Line 1\\nLine 2\"\ntab: \"Column1\\tColumn2\"\nquote: 'She said \"hello\"'\nunicode: \"\\u00A9\"\n\n# Single quotes (no escapes, use '' for a literal single quote)\npath: 'C:\\Users\\John'\napostrophe: \"It's fine\"\n\n# When you MUST use quotes\ncolon_text: 'key: value'        # Contains a colon\nhash_text: 'Use # for comments' # Contains a hash\nnumber_string: '123'            # Keeps it a string, not a number\nbool_string: 'true'             # Keeps it a string, not a boolean\nversion: '1.0'                  # Prevents it being read as a number",
       },
       {
         id: 'multi-line-strings',
@@ -10740,7 +10740,7 @@ export const refTopics: Record<string, RefTopic> = {
         title: 'Special Characters & Gotchas',
         description: 'Common mistakes to avoid:',
         language: 'yaml',
-        code: "# Tabs are NOT allowed for indentation, use spaces only\n\n# Values that look like other types get converted automatically\nversion: 1.0 # Number (1.0), not a string\nversion_str: '1.0' # String\nzip_code: 01234 # May be read as an octal number!\nzip_safe: '01234' # Correct: string\n\n# The \"Norway problem\": these may be read as booleans in older YAML 1.1 parsers\ncountry: NO # Could become false!\ncountry_safe: 'NO' # Correct\n\n# Colon followed by space is special\nurl: http://example.com # Works (no space after the colon in the URL)\ntime: '12:30' # Quote times to be safe\n\n# Strings starting with special characters need quotes\nstar: '*not-an-alias'\nat: '@username'\nbacktick: '`code`'\npercent: '%value'\nexclamation: '!important'\ndash_start: '- not a list item'",
+        code: "# Tabs are NOT allowed for indentation, use spaces only\n\n# Values that look like other types get converted automatically\nversion: 1.0       # Number (1.0), not a string\nversion_str: '1.0' # String\nzip_code: 01234    # May be read as an octal number!\nzip_safe: '01234'  # Correct: string\n\n# The \"Norway problem\": these may be read as booleans in older YAML 1.1 parsers\ncountry: NO        # Could become false!\ncountry_safe: 'NO' # Correct\n\n# Colon followed by space is special\nurl: http://example.com # Works (no space after the colon in the URL)\ntime: '12:30'           # Quote times to be safe\n\n# Strings starting with special characters need quotes\nstar: '*not-an-alias'\nat: '@username'\nbacktick: '`code`'\npercent: '%value'\nexclamation: '!important'\ndash_start: '- not a list item'",
       },
       {
         id: 'tags-and-explicit-types',
@@ -10796,7 +10796,7 @@ export const refTopics: Record<string, RefTopic> = {
         title: 'Command Line Tools',
         description: 'Handy tools for working with YAML files:',
         language: 'bash',
-        code: "# yq (like jq, but for YAML)\nyq '.app.name' config.yaml                  # Read a value\nyq '.app.version = \"2.0\"' config.yaml          # Change a value\nyq -i '.server.port = 9090' config.yaml           # Edit the file in place\nyq -o=json config.yaml                               # Convert YAML to JSON\nyq -P config.json                                       # Convert JSON to YAML\n\n# yamllint (check for errors and style issues)\npip install yamllint\nyamllint config.yaml",
+        code: "# yq (like jq, but for YAML)\nyq '.app.name' config.yaml              # Read a value\nyq '.app.version = \"2.0\"' config.yaml   # Change a value\nyq -i '.server.port = 9090' config.yaml # Edit the file in place\nyq -o=json config.yaml                  # Convert YAML to JSON\nyq -P config.json                       # Convert JSON to YAML\n\n# yamllint (check for errors and style issues)\npip install yamllint\nyamllint config.yaml",
       },
       {
         id: 'common-patterns',
@@ -10804,6 +10804,397 @@ export const refTopics: Record<string, RefTopic> = {
         description: 'Frequently used YAML patterns:',
         language: 'yaml',
         code: "# Environment-specific config with shared defaults\ndefaults: &defaults\n  timeout: 30\n  retries: 3\n\ndevelopment:\n  <<: *defaults\n  debug: true\n\nproduction:\n  <<: *defaults\n  debug: false\n  timeout: 60\n\n# List of key-value pairs (like environment variables)\nenv:\n  - name: API_KEY\n    value: abc123\n  - name: DEBUG\n    value: 'true'\n\n# Quote values that must stay strings\nports:\n  - '8080:80'\nversion: '3.8'\n\n# Long commands or scripts with a literal block\nscript: |\n  echo \"Starting...\"\n  npm install\n  npm run build\n\n# One long line split with a folded block\ndescription: >\n  This is a very long description\n  that would be hard to read on one line.",
+      },
+    ],
+  },
+  bash: {
+    lang: 'bash',
+    label: 'Bash',
+    title: 'Bash',
+    icon: '/bash_dark.svg',
+    color: '#4EAA25',
+    sections: [
+      {
+        id: 'getting-started',
+        title: 'Getting Started',
+        description: 'Create and run your first script:',
+        language: 'bash',
+        code: '#!/bin/bash\n# The first line (shebang) tells the system to run this file with Bash\n\necho "Hello World"\n\n# Save as script.sh, then:\nchmod +x script.sh # Make it executable\n./script.sh        # Run it\n\nbash script.sh                  # Run without making it executable\n\n# Check your Bash version\nbash --version',
+      },
+      {
+        id: 'comments',
+        title: 'Comments',
+        description: 'Notes that Bash ignores:',
+        language: 'bash',
+        code: '# This is a single line comment\n\necho "Hello"    # Comment at the end of a line\n\n# There is no official multi-line comment. This trick works:\n: \'\nThis is a\nmulti-line comment\n\'',
+      },
+      {
+        id: 'variables',
+        title: 'Variables',
+        description: 'Store and use data:',
+        language: 'bash',
+        code: '# Set a variable (NO spaces around the = sign)\nname="John"\nage=30\ngreeting="Hello World"\n\n# Use a variable (put $ in front)\necho $name\necho "Hello, $name"\necho "Hello, ${name}!"       # Braces help when text follows the name\necho "${name}_backup"\n\n# Wrong: spaces around =\n# name = "John"              # Error!\n\n# Read-only (constant)\nreadonly PI=3.14159\n\n# Delete a variable\nunset name\n\n# Command output in a variable\ntoday=$(date +%Y-%m-%d)\nfiles=$(ls | wc -l)\ncurrent_dir=$(pwd)\n\n# Old style (backticks, avoid in new scripts)\ntoday=`date`\n\n# Default values\necho ${name:-"Guest"}         # Use "Guest" if name is empty or unset\necho ${name:="Guest"}         # Same, but also assigns it to name\necho ${name:?"Name required"} # Exit with error if name is empty\necho ${name:+"has a value"}   # Use text only if name has a value\n\n# Environment variables\nexport MY_VAR="value"         # Available to child processes\necho $HOME\necho $USER\necho $PATH\necho $PWD\necho $SHELL',
+      },
+      {
+        id: 'quotes',
+        title: 'Quotes',
+        description: 'How quotes change behavior:',
+        language: 'bash',
+        code: 'name="John"\n\necho "Hello $name" # Double quotes: variables ARE expanded -> Hello John\necho \'Hello $name\' # Single quotes: everything is literal -> Hello $name\necho "Cost: \\$5"   # Backslash escapes a special character\necho "She said \\"hi\\""\n\n# Always quote variables to handle spaces safely\nfile="my document.txt"\ncat "$file"               # Correct\n# cat $file               # Wrong: breaks into two words\n\n# $\'...\' lets you use escape sequences\necho $\'Line 1\\nLine 2\'\necho $\'Tab\\there\'',
+      },
+      {
+        id: 'special-variables',
+        title: 'Special Variables',
+        description: 'Built-in variables that hold useful information:',
+        language: 'bash',
+        code: '$0          # Name of the script\n$1 $2 $3    # First, second, third argument\n${10}       # Tenth argument (braces needed after 9)\n$#          # Number of arguments\n$@          # All arguments (each as a separate word)\n$*          # All arguments (as one word)\n$?          # Exit status of the last command (0 = success)\n$$          # Process ID of the current script\n$!          # Process ID of the last background command\n$_          # Last argument of the previous command\n\n#!/bin/bash\n# Run as: ./script.sh apple banana\necho "Script: $0" # ./script.sh\necho "First: $1"  # apple\necho "Second: $2" # banana\necho "Count: $#"  # 2\necho "All: $@"    # apple banana\n\n# Shift moves arguments left ($2 becomes $1)\nshift\necho $1                              # banana',
+      },
+      {
+        id: 'user-input',
+        title: 'User Input',
+        description: 'Ask the user for data:',
+        language: 'bash',
+        code: '# Basic input\necho "What is your name?"\nread name\necho "Hello, $name"\n\n# Prompt on the same line\nread -p "Enter your name: " name\n\n# Hidden input (for passwords)\nread -sp "Password: " password\necho\n\n# Limit input\nread -n 1 -p "Continue? (y/n) " answer # Read just 1 character\nread -t 5 -p "Quick! " answer          # Timeout after 5 seconds\n\n# Default value if user presses Enter\nread -p "Name [Guest]: " name\nname=${name:-Guest}\n\n# Read into an array\nread -a words <<< "one two three"',
+      },
+      {
+        id: 'output',
+        title: 'Output',
+        description: 'Print text to the screen:',
+        language: 'bash',
+        code: 'echo "Hello"\necho -n "No newline at the end"\necho -e "Line 1\\nLine 2\\tTabbed"       # -e enables escape sequences\n\n# printf gives more control (like C)\nprintf "Name: %s, Age: %d\\n" "John" 30\nprintf "%.2f\\n" 3.14159  # 3.14\nprintf "%5d\\n" 42        # Pad to width 5\nprintf "%-10s|\\n" "left" # Left-align\n\n# Print to standard error\necho "Error message" >&2\n\n# Colors (ANSI codes)\nRED=\'\\033[0;31m\'\nGREEN=\'\\033[0;32m\'\nNC=\'\\033[0m\'                    # No Color\necho -e "${RED}Error${NC}"\necho -e "${GREEN}Success${NC}"',
+      },
+      {
+        id: 'arithmetic',
+        title: 'Arithmetic',
+        description: 'Do math in Bash:',
+        language: 'bash',
+        code: '# $(( )) for integer math\nsum=$((5 + 3))\ndiff=$((10 - 4))\nproduct=$((6 * 7))\nquotient=$((20 / 3))  # 6 (integer division only)\nremainder=$((20 % 3)) # 2\npower=$((2 ** 3))     # 8\n\n# Using variables\na=10\nb=3\necho $((a + b))\necho $((a * b))\n\n# Increment and decrement\ncount=0\n((count++))\n((count--))\n((count += 5))\n((count *= 2))\ncount=$((count + 1))\n\n# Compare numbers inside (( ))\nif ((a > b)); then echo "a is bigger"; fi\n\n# Decimals need bc or awk (Bash only does integers)\necho "scale=2; 10 / 3" | bc # 3.33\necho "3.5 + 2.1" | bc       # 5.6\nawk \'BEGIN {print 10 / 3}\'  # 3.33333\n\n# Random number\necho $RANDOM           # 0-32767\necho $((RANDOM % 100)) # 0-99',
+      },
+      {
+        id: 'conditionals',
+        title: 'Conditionals',
+        description: 'Make decisions in your script:',
+        language: 'bash',
+        code: '# Basic if\nage=18\nif [ $age -ge 18 ]; then\n    echo "Adult"\nfi\n\n# If-else\nif [ $age -ge 18 ]; then\n    echo "Adult"\nelse\n    echo "Minor"\nfi\n\n# If-elif-else\nscore=85\nif [ $score -ge 90 ]; then\n    echo "A"\nelif [ $score -ge 80 ]; then\n    echo "B"\nelse\n    echo "F"\nfi\n\n# One-line version\n[ $age -ge 18 ] && echo "Adult" || echo "Minor"\n\n# [[ ]] is the modern, safer version (Bash only)\nif [[ $age -ge 18 ]]; then\n    echo "Adult"\nfi',
+      },
+      {
+        id: 'test-operators',
+        title: 'Test Operators',
+        description: 'Compare numbers, strings, and files:',
+        language: 'bash',
+        code: '# Number comparison\n[ $a -eq $b ] # Equal\n[ $a -ne $b ] # Not equal\n[ $a -gt $b ] # Greater than\n[ $a -ge $b ] # Greater than or equal\n[ $a -lt $b ] # Less than\n[ $a -le $b ] # Less than or equal\n\n# String comparison\n[[ $s1 == $s2 ]] # Equal\n[[ $s1 != $s2 ]] # Not equal\n[[ -z $s ]]      # String is empty\n[[ -n $s ]]      # String is not empty\n[[ $s1 < $s2 ]]  # Alphabetical comparison\n\n# Pattern and regex matching (inside [[ ]])\n[[ $file == *.txt ]]                    # Wildcard match\n[[ $email =~ ^[a-z]+@[a-z]+\\.[a-z]+$ ]] # Regex match\n\n# File tests\n[ -e file ]         # Exists\n[ -f file ]         # Is a regular file\n[ -d dir ]          # Is a directory\n[ -r file ]         # Is readable\n[ -w file ]         # Is writable\n[ -x file ]         # Is executable\n[ -s file ]         # Exists and is not empty\n[ -L file ]         # Is a symbolic link\n[ file1 -nt file2 ] # file1 is newer than file2\n\n# Logical operators\n[[ $a -gt 5 && $b -lt 10 ]] # AND\n[[ $a -gt 5 || $b -lt 10 ]] # OR\n[[ ! -f file ]]             # NOT\n\n# Combine separate tests\n[ $a -gt 5 ] && [ $b -lt 10 ]\n[ $a -gt 5 ] || [ $b -lt 10 ]',
+      },
+      {
+        id: 'case-statement',
+        title: 'Case Statement',
+        description: 'Match one value against many patterns:',
+        language: 'bash',
+        code: 'read -p "Enter a fruit: " fruit\n\ncase $fruit in\n    apple)\n        echo "Red or green"\n        ;;\n    banana|plantain)              # Multiple patterns with |\n        echo "Yellow"\n        ;;\n    [Oo]range)                       # Pattern matching\n        echo "Orange"\n        ;;\n    *)                                  # Default case\n        echo "Unknown fruit"\n        ;;\nesac\n\n# Common use: handling script options\ncase $1 in\n    start)   echo "Starting..." ;;\n    stop)    echo "Stopping..." ;;\n    restart) echo "Restarting..." ;;\n    *)       echo "Usage: $0 {start|stop|restart}" ;;\nesac',
+      },
+      {
+        id: 'loops',
+        title: 'Loops',
+        description: 'Repeat code:',
+        language: 'bash',
+        code: '# For loop over a list\nfor fruit in apple banana orange; do\n    echo $fruit\ndone\n\n# For loop over a range\nfor i in {1..5}; do\n    echo $i\ndone\n\nfor i in {0..10..2}; do        # Step by 2\n    echo $i\ndone\n\n# C-style for loop\nfor ((i = 0; i < 5; i++)); do\n    echo $i\ndone\n\n# Loop over files\nfor file in *.txt; do\n    echo "Processing $file"\ndone\n\n# Loop over command output\nfor user in $(cut -d: -f1 /etc/passwd); do\n    echo $user\ndone\n\n# Loop over arguments\nfor arg in "$@"; do\n    echo $arg\ndone\n\n# While loop\ncount=0\nwhile [ $count -lt 5 ]; do\n    echo $count\n    ((count++))\ndone\n\n# Until loop (runs until the condition is true)\ncount=0\nuntil [ $count -ge 5 ]; do\n    echo $count\n    ((count++))\ndone\n\n# Read a file line by line (best practice)\nwhile IFS= read -r line; do\n    echo "$line"\ndone < file.txt\n\n# Infinite loop\nwhile true; do\n    echo "Running..."\n    sleep 1\ndone\n\n# Break and continue\nfor i in {1..10}; do\n    if [ $i -eq 3 ]; then continue; fi # Skip 3\n    if [ $i -eq 6 ]; then break; fi    # Stop at 6\n    echo $i\ndone',
+      },
+      {
+        id: 'functions',
+        title: 'Functions',
+        description: 'Reusable blocks of code:',
+        language: 'bash',
+        code: '# Define a function\ngreet() {\n    echo "Hello, $1!"\n}\n\n# Call it\ngreet "John"\n\n# Another syntax\nfunction say_bye {\n    echo "Goodbye, $1!"\n}\n\n# Arguments work like script arguments ($1, $2, $#, $@)\nadd() {\n    local sum=$(($1 + $2))     # local keeps the variable inside the function\n    echo $sum\n}\n\nresult=$(add 5 3) # Capture the output\necho $result      # 8\n\n# Return values: return only gives a status code (0-255)\nis_even() {\n    if (( $1 % 2 == 0 )); then\n        return 0              # 0 = success/true\n    else\n        return 1                 # non-zero = failure/false\n    fi\n}\n\nif is_even 4; then\n    echo "Even"\nfi\n\n# Functions that check input\ncheck_file() {\n    if [[ ! -f "$1" ]]; then\n        echo "File not found: $1" >&2\n        return 1\n    fi\n    echo "File exists"\n}\n\n# Variables are global by default, use local to avoid surprises\ncounter=0\nincrement() {\n    local counter=10       # Does not change the global counter\n    ((counter++))\n}',
+      },
+      {
+        id: 'arrays',
+        title: 'Arrays',
+        description: 'Store lists of values:',
+        language: 'bash',
+        code: '# Create an array\nfruits=("apple" "banana" "orange")\n\n# Access elements (index starts at 0)\necho ${fruits[0]}  # apple\necho ${fruits[1]}  # banana\necho ${fruits[-1]} # orange (last)\n\n# All elements\necho ${fruits[@]}   # apple banana orange\necho "${fruits[@]}" # Quoted (keeps items with spaces intact)\n\n# Length\necho ${#fruits[@]}                    # 3\n\n# Add elements\nfruits+=("grape")\nfruits[5]="kiwi"\n\n# Remove an element\nunset fruits[1]\n\n# Slice\necho ${fruits[@]:1:2}                # 2 elements starting at index 1\n\n# Loop through\nfor fruit in "${fruits[@]}"; do\n    echo $fruit\ndone\n\n# Loop with index\nfor i in "${!fruits[@]}"; do\n    echo "$i: ${fruits[$i]}"\ndone\n\n# Read command output into an array\nfiles=($(ls))\nmapfile -t lines < file.txt         # Each line becomes an element\n\n# Associative arrays (like dictionaries, Bash 4+)\ndeclare -A ages\nages[John]=30\nages[Jane]=25\n\necho ${ages[John]} # 30\necho ${!ages[@]}   # All keys\necho ${ages[@]}    # All values\n\nfor name in "${!ages[@]}"; do\n    echo "$name is ${ages[$name]}"\ndone',
+      },
+      {
+        id: 'string-operations',
+        title: 'String Operations',
+        description: 'Work with text inside variables:',
+        language: 'bash',
+        code: 'text="Hello World"\n\n# Length\necho ${#text}                       # 11\n\n# Substring (start, length)\necho ${text:0:5} # Hello\necho ${text:6}   # World\necho ${text: -5} # World (note the space before -)\n\n# Replace\necho ${text/World/Bash} # Replace first match\necho ${text//o/0}       # Replace all matches -> Hell0 W0rld\n\n# Remove from start (# shortest, ## longest)\nfile="/path/to/file.txt"\necho ${file##*/} # file.txt (like basename)\necho ${file#*/}  # path/to/file.txt\n\n# Remove from end (% shortest, %% longest)\necho ${file%/*}   # /path/to (like dirname)\necho ${file%.txt} # /path/to/file\necho ${file##*.}  # txt (extension)\n\n# Change case (Bash 4+)\necho ${text^^} # HELLO WORLD\necho ${text,,} # hello world\necho ${text^}  # Hello world (first letter)\n\n# Check if a string contains text\nif [[ $text == *"World"* ]]; then\n    echo "Found"\nfi\n\n# Trim whitespace\ntrimmed=$(echo "  hello  " | xargs)\n\n# Join array into a string\nIFS=\',\'; echo "${fruits[*]}"; unset IFS\n\n# Split a string into an array\nIFS=\',\' read -ra parts <<< "a,b,c"',
+      },
+      {
+        id: 'command-chaining',
+        title: 'Command Chaining',
+        description: 'Control how commands run together:',
+        language: 'bash',
+        code: 'command1 ; command2  # Run both, one after the other\ncommand1 && command2 # Run command2 only if command1 succeeds\ncommand1 || command2 # Run command2 only if command1 fails\ncommand1 | command2  # Pipe output of command1 into command2\ncommand &            # Run in the background\n\n# Common patterns\nmkdir backup && cd backup\ncd /some/dir || exit 1\n[ -f config.txt ] || echo "Missing config"\n\n# Group commands\n{ echo "one"; echo "two"; } > output.txt # Runs in the current shell\n(cd /tmp && ls)                          # Runs in a subshell (cd doesn\'t stick)',
+      },
+      {
+        id: 'exit-codes',
+        title: 'Exit Codes',
+        description: 'Tell the system if your script worked:',
+        language: 'bash',
+        code: '# 0 means success, anything else means failure\necho "Success"\nexit 0\n\necho "Something went wrong" >&2\nexit 1\n\n# Check the last command\'s exit code\nls /nonexistent\necho $?                    # 2 (error)\n\n# Act on exit codes\nif grep -q "error" log.txt; then\n    echo "Errors found"\nfi\n\nif ! command -v git &> /dev/null; then\n    echo "git is not installed"\n    exit 1\nfi',
+      },
+      {
+        id: 'script-safety-options',
+        title: 'Script Safety Options',
+        description: 'Make your scripts safer and easier to debug:',
+        language: 'bash',
+        code: '#!/bin/bash\nset -e          # Exit immediately if any command fails\nset -u          # Error on undefined variables\nset -o pipefail # A pipeline fails if any command in it fails\nset -x          # Print each command before running it (debugging)\n\n# Common combined safe header\nset -euo pipefail\n\n# Turn an option off\nset +x\n\n# Run with debug on without editing the file\nbash -x script.sh\n\n# Cleanup on exit (trap)\ncleanup() {\n    echo "Cleaning up..."\n    rm -f /tmp/mytempfile\n}\ntrap cleanup EXIT              # Runs when the script exits, for any reason\n\ntrap \'echo "Interrupted"; exit 1\' INT TERM      # On Ctrl+C or kill\n\n# Create a safe temporary file or folder\ntmpfile=$(mktemp)\ntmpdir=$(mktemp -d)',
+      },
+      {
+        id: 'redirection-and-here-documents',
+        title: 'Redirection & Here Documents',
+        description: 'Control where input and output go:',
+        language: 'bash',
+        code: 'command > file.txt       # Output to file (overwrite)\ncommand >> file.txt      # Output to file (append)\ncommand < file.txt       # Read input from a file\ncommand 2> errors.txt    # Send errors to a file\ncommand > out.txt 2>&1   # Send both output and errors to one file\ncommand &> all.txt       # Shorthand for the same thing\ncommand > /dev/null      # Throw away output\ncommand > /dev/null 2>&1 # Throw away everything\n\n# Here document (multi-line input)\ncat << EOF\nHello $USER\nToday is $(date)\nEOF\n\n# Here document without expanding variables\ncat << \'EOF\'\nThis $VAR is not expanded\nEOF\n\n# Write multi-line text to a file\ncat > config.txt << EOF\nname=John\nport=8080\nEOF\n\n# Here string (one line of input)\ngrep "hello" <<< "hello world"\n\n# Process substitution (treat command output as a file)\ndiff <(ls dir1) <(ls dir2)',
+      },
+      {
+        id: 'argument-parsing',
+        title: 'Argument Parsing',
+        description: 'Handle options like `-h` and `--name`:',
+        language: 'bash',
+        code: '#!/bin/bash\n\n# Simple check for required arguments\nif [ $# -lt 1 ]; then\n    echo "Usage: $0 <filename>"\n    exit 1\nfi\n\n# getopts for short options (-v, -n value)\nverbose=false\nname=""\n\nwhile getopts "vn:h" opt; do\n    case $opt in\n        v) verbose=true ;;\n        n) name="$OPTARG" ;;\n        h) echo "Usage: $0 [-v] [-n name]"; exit 0 ;;\n        \\?) echo "Invalid option: -$OPTARG" >&2; exit 1 ;;\n    esac\ndone\nshift $((OPTIND - 1))        # Remove processed options, $1 is now the first non-option\n\necho "Verbose: $verbose, Name: $name, Remaining: $@"\n\n# Manual parsing for long options (--name=value)\nwhile [[ $# -gt 0 ]]; do\n    case $1 in\n        --name)    name="$2"; shift 2 ;;\n        --verbose) verbose=true; shift ;;\n        --help)    echo "Usage: ..."; exit 0 ;;\n        *)         echo "Unknown option: $1"; exit 1 ;;\n    esac\ndone',
+      },
+      {
+        id: 'useful-built-ins',
+        title: 'Useful Built-ins',
+        description: 'Handy commands for scripting:',
+        language: 'bash',
+        code: '# Check if a command exists\nif command -v docker &> /dev/null; then\n    echo "Docker is installed"\nfi\n\n# Sleep\nsleep 2                # Wait 2 seconds\n\n# Date and time\ndate           # Current date and time\ndate +%Y-%m-%d # 2024-12-10\ndate +%H:%M:%S # 15:30:45\ndate +%s       # Unix timestamp\n\n# Run a command and time it\ntime ./script.sh\n\n# Wait for background jobs\n./task1.sh &\n./task2.sh &\nwait                       # Wait for all background jobs to finish\n\n# Source another script (load its variables and functions)\nsource ./config.sh\n. ./config.sh               # Same thing\n\n# Run a string as a command (use carefully)\ncmd="ls -la"\neval $cmd\n\n# Get the directory of the current script\nSCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"\n\n# Basename and dirname\nbasename /path/to/file.txt # file.txt\ndirname /path/to/file.txt  # /path/to\n\n# Read the script\'s own name\necho "Running $(basename "$0")"',
+      },
+      {
+        id: 'common-patterns',
+        title: 'Common Patterns',
+        description: 'Frequently used script recipes:',
+        language: 'bash',
+        code: '#!/bin/bash\nset -euo pipefail\n\n# Check if running as root\nif [[ $EUID -ne 0 ]]; then\n    echo "Please run as root" >&2\n    exit 1\nfi\n\n# Confirm before doing something risky\nread -p "Are you sure? (y/n) " -n 1 -r\necho\nif [[ $REPLY =~ ^[Yy]$ ]]; then\n    echo "Continuing..."\nfi\n\n# Backup a file with a timestamp\ncp file.txt "file.txt.$(date +%Y%m%d_%H%M%S).bak"\n\n# Retry a command up to 3 times\nfor i in {1..3}; do\n    if curl -sf https://example.com > /dev/null; then\n        echo "Success"\n        break\n    fi\n    echo "Attempt $i failed, retrying..."\n    sleep 2\ndone\n\n# Check if a file exists before using it\nif [[ ! -f "$1" ]]; then\n    echo "Error: file \'$1\' not found" >&2\n    exit 1\nfi\n\n# Logging function\nlog() {\n    echo "[$(date \'+%Y-%m-%d %H:%M:%S\')] $*"\n}\nlog "Script started"\n\n# Process every file in a folder\nfor file in /path/to/dir/*; do\n    [[ -f "$file" ]] || continue\n    echo "Processing $file"\ndone\n\n# Count lines in each .txt file\nfor f in *.txt; do\n    echo "$f: $(wc -l < "$f") lines"\ndone\n\n# Simple menu\nPS3="Choose an option: "\nselect option in "Start" "Stop" "Quit"; do\n    case $option in\n        Start) echo "Starting" ;;\n        Stop)  echo "Stopping" ;;\n        Quit)  break ;;\n        *)     echo "Invalid" ;;\n    esac\ndone\n\n# Lock file to prevent two copies running at once\nLOCKFILE=/tmp/myscript.lock\nif [ -e "$LOCKFILE" ]; then\n    echo "Already running"\n    exit 1\nfi\ntouch "$LOCKFILE"\ntrap \'rm -f "$LOCKFILE"\' EXIT\n\n# Progress dots\nfor i in {1..5}; do\n    echo -n "."\n    sleep 1\ndone\necho " Done"',
+      },
+      {
+        id: 'complete-script-example',
+        title: 'Complete Script Example',
+        description: 'A realistic script putting it all together:',
+        language: 'bash',
+        code: '#!/bin/bash\n#\n# backup.sh - Back up a folder into a dated archive\n# Usage: ./backup.sh [-v] <source_dir> <backup_dir>\n\nset -euo pipefail\n\nVERBOSE=false\n\nusage() {\n    echo "Usage: $0 [-v] <source_dir> <backup_dir>"\n    exit 1\n}\n\nlog() {\n    if [[ $VERBOSE == true ]]; then\n        echo "[$(date \'+%H:%M:%S\')] $*"\n    fi\n}\n\nwhile getopts "vh" opt; do\n    case $opt in\n        v) VERBOSE=true ;;\n        h) usage ;;\n        *) usage ;;\n    esac\ndone\nshift $((OPTIND - 1))\n\n[[ $# -eq 2 ]] || usage\n\nSOURCE="$1"\nDEST="$2"\n\nif [[ ! -d "$SOURCE" ]]; then\n    echo "Error: \'$SOURCE\' is not a directory" >&2\n    exit 1\nfi\n\nmkdir -p "$DEST"\n\nARCHIVE="$DEST/backup_$(date +%Y%m%d_%H%M%S).tar.gz"\n\nlog "Backing up $SOURCE to $ARCHIVE"\ntar -czf "$ARCHIVE" -C "$SOURCE" .\n\nlog "Done. Size: $(du -h "$ARCHIVE" | cut -f1)"\necho "Backup created: $ARCHIVE"',
+      },
+    ],
+  },
+  vim: {
+    lang: 'vim',
+    label: 'Vim',
+    title: 'Vim',
+    icon: '/vim.svg',
+    color: '#019733',
+    sections: [
+      {
+        id: 'starting-and-exiting',
+        title: 'Starting & Exiting',
+        description: 'Open files and leave Vim:',
+        snippets: [
+          {
+            language: 'bash',
+            code: "vim file.txt            # Open a file (creates it if it doesn't exist)\nvim file1.txt file2.txt # Open several files\nvim +10 file.txt        # Open and jump to line 10\nvim +/pattern file.txt  # Open and jump to the first match\nvim -R file.txt         # Open read-only (also: view file.txt)\nvim -d file1 file2      # Compare two files side by side\nvim                     # Start with an empty buffer\nvimtutor                # Built-in interactive lesson (30 min)",
+          },
+          {
+            language: 'vim',
+            code: ':q             " Quit (fails if there are unsaved changes)\n:q!            " Quit and throw away changes\n:w             " Save\n:w newname.txt " Save as a new file\n:wq            " Save and quit\n:x             " Save and quit (only writes if changed)\nZZ             " Save and quit (normal mode shortcut)\nZQ             " Quit without saving (normal mode shortcut)\n:wa            " Save all open files\n:qa            " Quit all\n:wqa           " Save and quit all\n:e!            " Reload the file, discarding changes',
+          },
+        ],
+      },
+      {
+        id: 'modes',
+        title: 'Modes',
+        description: 'Vim has different modes, and keys do different things in each:',
+        language: 'vim',
+        code: 'Normal mode    - Default mode. Keys are commands (move, delete, copy...)\nInsert mode    - Type text like a normal editor\nVisual mode    - Select text\nCommand mode   - Type commands that start with : (like :w)\nReplace mode   - Type over existing text\n\nEsc            - Return to Normal mode (from any mode)\nCtrl+[         - Same as Esc\nCtrl+c         - Similar to Esc (skips some abbreviations)\n\ni      " Insert before the cursor\na      " Insert after the cursor\nI      " Insert at the start of the line\nA      " Insert at the end of the line\no      " Open a new line below and insert\nO      " Open a new line above and insert\ngi     " Insert where you last left insert mode\nR      " Replace mode (type over text)\nv      " Visual mode (select characters)\nV      " Visual line mode (select whole lines)\nCtrl+v " Visual block mode (select a column)\n:      " Command mode',
+      },
+      {
+        id: 'basic-movement',
+        title: 'Basic Movement',
+        description: "Move around without leaving the keyboard's home row:",
+        language: 'vim',
+        code: 'h " Left\nj " Down\nk " Up\nl " Right\n\n" Numbers repeat a command\n5j  " Move down 5 lines\n10l " Move right 10 characters\n\nw  " Next word (start)\nW  " Next WORD (split only by spaces)\ne  " End of word\nb  " Previous word (start)\nB  " Previous WORD\nge " End of previous word\n\n0  " Start of the line\n^  " First non-blank character of the line\n$  " End of the line\ng_ " Last non-blank character of the line\n\ngg  " First line of the file\nG   " Last line of the file\n5G  " Go to line 5\n:5  " Go to line 5 (command form)\n50% " Go to 50% through the file\n\nCtrl+f " Page down\nCtrl+b " Page up\nCtrl+d " Half page down\nCtrl+u " Half page up\n\nH " Top of the screen\nM " Middle of the screen\nL " Bottom of the screen\n\nzz " Center the screen on the cursor\nzt " Put the cursor line at the top of the screen\nzb " Put the cursor line at the bottom of the screen\n\n{ " Previous paragraph (blank line)\n} " Next paragraph\n( " Previous sentence\n) " Next sentence\n% " Jump to the matching bracket ( ) [ ] { }',
+      },
+      {
+        id: 'find-characters-on-a-line',
+        title: 'Find Characters on a Line',
+        description: 'Jump quickly within the current line:',
+        language: 'vim',
+        code: 'f{char} " Jump forward to a character (fa jumps to the next \'a\')\nF{char} " Jump backward to a character\nt{char} " Jump forward to just before a character\nT{char} " Jump backward to just after a character\n;       " Repeat the last f, F, t, or T\n,       " Repeat it in the opposite direction',
+      },
+      {
+        id: 'editing-text',
+        title: 'Editing Text',
+        description: 'Change, delete, and copy:',
+        language: 'vim',
+        code: 'x   " Delete the character under the cursor\nX   " Delete the character before the cursor\ndd  " Delete (cut) the whole line\nD   " Delete from the cursor to the end of the line\ndw  " Delete a word\nd$  " Delete to the end of the line\nd0  " Delete to the start of the line\ndgg " Delete to the top of the file\ndG  " Delete to the bottom of the file\n3dd " Delete 3 lines\n\ncc " Change (delete and enter insert mode) the whole line\nC  " Change from the cursor to the end of the line\ncw " Change a word\nc$ " Change to the end of the line\ns  " Delete a character and enter insert mode\nS  " Delete the line and enter insert mode\n\nr{char} " Replace one character (rx replaces with \'x\')\nJ       " Join the next line onto this one\n~       " Toggle upper/lower case of a character\nu       " Undo\nCtrl+r  " Redo\n.       " Repeat the last change (very powerful!)\n\nyy  " Yank (copy) the whole line\nY   " Same as yy\nyw  " Copy a word\ny$  " Copy to the end of the line\n3yy " Copy 3 lines\n\np   " Paste after the cursor (or below the line)\nP   " Paste before the cursor (or above the line)\nxp  " Swap two characters (delete, then paste)\nddp " Swap two lines',
+      },
+      {
+        id: 'operators-motions',
+        title: 'Operators + Motions',
+        description: "Vim's big idea: combine an action with a movement:",
+        language: 'vim',
+        code: '" Pattern:  [count] operator [count] motion\n\nd  " Delete\nc  " Change\ny  " Yank (copy)\n>  " Indent\n<  " Unindent\n=  " Auto-indent\ngu " Make lowercase\ngU " Make uppercase\ng~ " Toggle case\n\n" Examples\ndw  " Delete a word\nd3w " Delete 3 words\ndap " Delete a paragraph\nc$  " Change to the end of the line\ny2j " Copy this line and 2 below\ngUw " Make a word uppercase\n>}  " Indent to the end of the paragraph\ngUU " Make the whole line uppercase (double the operator = whole line)',
+      },
+      {
+        id: 'text-objects',
+        title: 'Text Objects',
+        description: 'Select "things" instead of positions. Use `i` for inside and `a` for around:',
+        language: 'vim',
+        code: 'iw / aw                " Word (aw includes the trailing space)\niW / aW                " WORD\nis / as                " Sentence\nip / ap                " Paragraph\ni" / a"                " Inside / around double quotes\ni\' / a\'                " Inside / around single quotes\ni` / a`                " Inside / around backticks\ni( / a(   (or ib / ab) " Inside / around parentheses\ni{ / a{   (or iB / aB) " Inside / around curly braces\ni[ / a[                " Inside / around square brackets\ni< / a<                " Inside / around angle brackets\nit / at                " Inside / around an HTML or XML tag\n\n" Examples\nciw " Change the word under the cursor\ndi" " Delete everything inside the quotes\nci( " Change everything inside the parentheses\nda{ " Delete the braces and everything inside\nyit " Copy the content inside an HTML tag\nvip " Select the paragraph\ncit " Change the content inside a tag',
+      },
+      {
+        id: 'visual-mode',
+        title: 'Visual Mode',
+        description: 'Select text, then act on it:',
+        language: 'vim',
+        code: 'v      " Start selecting characters\nV      " Start selecting whole lines\nCtrl+v " Start selecting a block (column)\n\n" After selecting, use:\nd  " Delete\ny  " Copy\nc  " Change\n>  " Indent\n<  " Unindent\n~  " Toggle case\nu  " Lowercase\nU  " Uppercase\nJ  " Join lines\n:  " Run a command on the selection\no  " Jump to the other end of the selection\ngv " Reselect the last selection\n\n" Visual block mode tricks\nCtrl+v   then  j j j  then  I  type text  then  Esc    " Insert text on several lines\nCtrl+v   then  j j j  then  $  then  A  text  then Esc " Append to the end of several lines\nCtrl+v   then  select  then  c                         " Change a column of text',
+      },
+      {
+        id: 'searching',
+        title: 'Searching',
+        description: 'Find text in the file:',
+        language: 'vim',
+        code: '/pattern " Search forward\n?pattern " Search backward\nn        " Next match\nN        " Previous match\n*        " Search for the word under the cursor (forward)\n#        " Search for the word under the cursor (backward)\n\n:set hlsearch   " Highlight all matches\n:set incsearch  " Show matches while you type\n:set ignorecase " Ignore case when searching\n:set smartcase  " Case-sensitive only if you type a capital letter\n:noh            " Clear the highlight\n\n" Search patterns\n/word\\c   " Ignore case for this search\n/^start   " Lines that start with \'start\'\n/end$     " Lines that end with \'end\'\n/\\<word\\> " Match whole word only\n/a.c      " . matches any character\n/colou\\?r " \\? makes the previous character optional\n/\\d\\+     " One or more digits',
+      },
+      {
+        id: 'find-and-replace',
+        title: 'Find & Replace',
+        description: 'Substitute text with `:s`:',
+        language: 'vim',
+        code: ':s/old/new/                  " Replace the first match on this line\n:s/old/new/g                 " Replace all matches on this line\n:%s/old/new/g                " Replace all matches in the whole file\n:%s/old/new/gc               " Replace all, but ask for confirmation each time\n:%s/old/new/gi               " Replace all, ignoring case\n:5,10s/old/new/g             " Replace only in lines 5 to 10\n:\'<,\'>s/old/new/g            " Replace only in the visual selection\n:%s/\\s\\+$//                  " Remove trailing spaces on every line\n:%s/^/# /                    " Add \'# \' to the start of every line\n:%s/\\(\\w\\+\\) \\(\\w\\+\\)/\\2 \\1/ " Swap two words using groups\n\n" Confirmation choices\ny " Yes, replace this one\nn " No, skip this one\na " Replace this and all the rest\nq " Quit\nl " Replace this one, then quit\n\n:g/pattern/d           " Delete all lines that match\n:v/pattern/d           " Delete all lines that do NOT match\n:g/pattern/s/old/new/g " Replace only on lines that match\n:g/^$/d                " Delete all empty lines',
+      },
+      {
+        id: 'registers',
+        title: 'Registers',
+        description: 'Vim has many clipboards:',
+        language: 'vim',
+        code: '"ayy        " Copy the line into register a\n"ap            " Paste from register a\n"Ayy              " Append the line to register a\n\n""               " The default (unnamed) register\n"0                  " The last yank (copy)\n"+                     " System clipboard\n"*                        " Selection clipboard (Linux)\n"_                           " Black hole (delete without saving)\n".                              " Last inserted text\n":                                 " Last command\n"/                                    " Last search\n\n"+y        " Copy to the system clipboard\n"+p           " Paste from the system clipboard\n"_dd             " Delete a line without overwriting the clipboard\n:reg         " Show all registers\nCtrl+r {reg} " In insert mode, paste a register',
+      },
+      {
+        id: 'marks-and-jumps',
+        title: 'Marks & Jumps',
+        description: 'Bookmark places in your file:',
+        language: 'vim',
+        code: 'ma          " Set mark \'a\' at the cursor (use any lowercase letter)\n\'a          " Jump to the line of mark a\n`a          " Jump to the exact position of mark a\nmA          " Set a global mark (works across files, use a capital letter)\n:marks      " List all marks\n:delmarks a " Delete mark a\n\n\'\'     " Jump back to the position before the last jump\n``     " Same, but exact position\nCtrl+o " Go back in the jump list\nCtrl+i " Go forward in the jump list\ng;     " Go to the last change position\ngg=G   " Auto-indent the whole file',
+      },
+      {
+        id: 'macros',
+        title: 'Macros',
+        description: 'Record and replay a series of keystrokes:',
+        language: 'vim',
+        code: 'qa          " Start recording into register a\n...         " Do your edits\nq           " Stop recording\n@a          " Play the macro in register a\n@@          " Repeat the last played macro\n5@a         " Play the macro 5 times\n:%normal @a " Play the macro on every line\n\n" Example: add a semicolon to the end of many lines\nqa A ; Esc j q " Record: append ;, then move down\n10@a           " Run it 10 more times',
+      },
+      {
+        id: 'indentation',
+        title: 'Indentation',
+        description: 'Shift and format code:',
+        language: 'vim',
+        code: '>>   " Indent the line\n<<   " Unindent the line\n3>>  " Indent 3 lines\n>ip  " Indent a paragraph\ngg=G " Auto-indent the whole file\n==   " Auto-indent the current line\n=ap  " Auto-indent a paragraph\n\n:set tabstop=4    " How wide a tab looks\n:set shiftwidth=4 " How many spaces an indent uses\n:set expandtab    " Use spaces instead of tabs\n:set autoindent   " Keep the indent of the previous line\n:set smartindent  " Smarter indenting for code\n:retab            " Convert existing tabs to the current settings',
+      },
+      {
+        id: 'multiple-files-buffers',
+        title: 'Multiple Files: Buffers',
+        description: 'Work with several files at once:',
+        language: 'vim',
+        code: ':e file.txt                   " Open a file in the current window\n:ls                           " List open buffers\n:b 2                          " Go to buffer number 2\n:b name                       " Go to a buffer by (part of its) name\n:bn                           " Next buffer\n:bp                           " Previous buffer\n:bd                           " Close (delete) the current buffer\n:b#                           " Switch to the last used buffer\nCtrl+^                        " Same as :b#\n:bufdo %s/old/new/ge | update " Run a command on all buffers',
+      },
+      {
+        id: 'windows-splits',
+        title: 'Windows (Splits)',
+        description: 'View several files on one screen:',
+        language: 'vim',
+        code: ':split file  " Horizontal split (or :sp)\n:vsplit file " Vertical split (or :vsp)\n:new         " New empty horizontal split\n:vnew        " New empty vertical split\n\nCtrl+w s       " Split horizontally\nCtrl+w v       " Split vertically\nCtrl+w h/j/k/l " Move to the window left/down/up/right\nCtrl+w w       " Cycle through windows\nCtrl+w c       " Close the current window\nCtrl+w o       " Close all other windows\nCtrl+w =       " Make all windows equal size\nCtrl+w _       " Maximize height\nCtrl+w |       " Maximize width\nCtrl+w H/J/K/L " Move the window to the far left/bottom/top/right\nCtrl+w r       " Rotate windows\n:only          " Keep only this window\n:q             " Close the current window',
+      },
+      {
+        id: 'tabs',
+        title: 'Tabs',
+        description: 'Tab pages (each can hold several splits):',
+        language: 'vim',
+        code: ':tabnew file  " Open a file in a new tab\n:tabe file    " Same thing\ngt            " Next tab\ngT            " Previous tab\n3gt           " Go to tab 3\n:tabn / :tabp " Next / previous tab\n:tabclose     " Close the current tab\n:tabonly      " Close all other tabs\n:tabs         " List tabs',
+      },
+      {
+        id: 'folding',
+        title: 'Folding',
+        description: 'Collapse parts of the file:',
+        language: 'vim',
+        code: 'zf{motion}             " Create a fold (zfap folds a paragraph)\nzo                     " Open a fold\nzc                     " Close a fold\nza                     " Toggle a fold\nzR                     " Open all folds\nzM                     " Close all folds\nzd                     " Delete a fold\n:set foldmethod=indent " Fold automatically by indentation\n:set foldmethod=syntax " Fold using the language\'s syntax',
+      },
+      {
+        id: 'command-line-tricks',
+        title: 'Command Line Tricks',
+        description: 'Useful commands that start with `:`:',
+        language: 'vim',
+        code: ':!ls           " Run a shell command\n:r file.txt    " Insert the contents of a file below the cursor\n:r !date       " Insert the output of a command\n:%!sort        " Pipe the whole file through a command (sort lines)\n:%!jq .        " Format JSON using jq\n:w !sudo tee % " Save a file you opened without sudo\n:sh            " Open a shell (type exit to come back)\n\n:set number             " Show line numbers (or :set nu)\n:set relativenumber     " Show relative line numbers (or :set rnu)\n:set nonumber           " Hide line numbers\n:set wrap / :set nowrap " Turn line wrapping on / off\n:set list               " Show hidden characters (tabs, line ends)\n:set paste              " Paste mode (stops auto-indent while pasting)\n:set nopaste            " Turn paste mode off\n:set mouse=a            " Enable mouse support\n:set cursorline         " Highlight the current line\n:syntax on              " Turn on syntax highlighting\n:set spell              " Turn on spell check\n:set all?               " Show all option values\n\nq:            " Open the command history window\n@:            " Repeat the last command line\nCtrl+r Ctrl+w " On the command line, paste the word under the cursor',
+      },
+      {
+        id: 'spell-check',
+        title: 'Spell Check',
+        description: '',
+        language: 'vim',
+        code: ':set spell   " Turn it on\n]s           " Next misspelled word\n[s           " Previous misspelled word\nz=           " Show suggestions\nzg           " Add the word to your dictionary\nzw           " Mark the word as wrong\n:set nospell " Turn it off',
+      },
+      {
+        id: 'insert-mode-shortcuts',
+        title: 'Insert Mode Shortcuts',
+        description: 'Helpful keys while typing:',
+        language: 'vim',
+        code: 'Ctrl+w             " Delete the previous word\nCtrl+u             " Delete to the start of the line\nCtrl+h             " Backspace\nCtrl+t / Ctrl+d    " Indent / unindent the line\nCtrl+o             " Run one Normal mode command, then return to Insert\nCtrl+r {reg}       " Paste from a register\nCtrl+n / Ctrl+p    " Autocomplete: next / previous word match\nCtrl+x Ctrl+f      " Complete a file name\nCtrl+x Ctrl+l      " Complete a whole line\nCtrl+v {key}       " Insert a special character literally\nCtrl+k {two chars} " Insert a digraph (Ctrl+k e : gives ë)',
+      },
+      {
+        id: 'configuration-vimrc',
+        title: 'Configuration (.vimrc)',
+        description: 'Save your settings in `~/.vimrc`:',
+        language: 'vim',
+        code: '" ~/.vimrc  (comments start with a double quote)\n\n" Basics\nset nocompatible          " Use Vim features, not old vi behavior\nsyntax on                 " Syntax highlighting\nfiletype plugin indent on " Language-aware plugins and indenting\n\n" Display\nset number         " Line numbers\nset relativenumber " Relative line numbers\nset cursorline     " Highlight the current line\nset showcmd        " Show partial commands\nset wildmenu       " Better tab completion in commands\nset scrolloff=5    " Keep 5 lines visible above/below the cursor\nset laststatus=2   " Always show the status line\n\n" Searching\nset hlsearch\nset incsearch\nset ignorecase\nset smartcase\n\n" Indentation\nset tabstop=4\nset shiftwidth=4\nset expandtab\nset autoindent\n\n" Behavior\nset mouse=a               " Mouse support\nset clipboard=unnamedplus " Use the system clipboard for yank and paste\nset hidden                " Switch buffers without saving first\nset undofile              " Keep undo history after closing a file\nset nobackup\nset noswapfile\n\n" Custom key mappings\nlet mapleader =                    " "                          " Use space as the leader key\nnnoremap <leader>w :w<CR>          " Space+w to save\nnnoremap <leader>q :q<CR>          " Space+q to quit\nnnoremap <leader>h :nohlsearch<CR> " Space+h to clear the highlight\nnnoremap <C-h> <C-w>h              " Easier window movement\nnnoremap <C-j> <C-w>j\nnnoremap <C-k> <C-w>k\nnnoremap <C-l> <C-w>l\ninoremap jk <Esc>                                           " Type jk to leave Insert mode',
+      },
+      {
+        id: 'key-mapping-types',
+        title: 'Key Mapping Types',
+        description: 'How to create your own shortcuts:',
+        language: 'vim',
+        code: 'nnoremap " Normal mode mapping\ninoremap " Insert mode mapping\nvnoremap " Visual mode mapping\ncnoremap " Command line mapping\nnoremap  " Works in several modes\n\n" Always prefer the \'nore\' versions (no recursive mapping)\nnnoremap <leader>s :w<CR>\n\n:map         " Show all mappings\n:nmap        " Show Normal mode mappings\n:unmap {key} " Remove a mapping',
+      },
+      {
+        id: 'plugins-vim-plug',
+        title: 'Plugins (vim-plug)',
+        description: 'Add extra features:',
+        snippets: [
+          {
+            language: 'bash',
+            code: '# Install vim-plug\ncurl -fLo ~/.vim/autoload/plug.vim --create-dirs \\\n    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim',
+          },
+          {
+            language: 'vim',
+            code: "\" In ~/.vimrc\ncall plug#begin('~/.vim/plugged')\n\nPlug 'tpope/vim-surround'   \" Change surrounding quotes and brackets\nPlug 'tpope/vim-commentary' \" Comment code with gcc\nPlug 'junegunn/fzf', { 'do': { -> fzf#install() } }\nPlug 'junegunn/fzf.vim'        \" Fuzzy file finder\nPlug 'preservim/nerdtree'      \" File explorer\nPlug 'vim-airline/vim-airline' \" Better status line\n\ncall plug#end()\n\n\" Then in Vim:\n\" :PlugInstall     Install plugins\n\" :PlugUpdate      Update plugins\n\" :PlugClean       Remove unused plugins",
+          },
+        ],
+      },
+      {
+        id: 'built-in-file-explorer',
+        title: 'Built-in File Explorer',
+        description: 'No plugin needed:',
+        language: 'vim',
+        code: ':Explore  " Open the file explorer (or :Ex)\n:Sexplore " Open it in a horizontal split\n:Vexplore " Open it in a vertical split\n\n" Inside the explorer\nEnter " Open the file or folder\n-     " Go up one folder\n%     " Create a new file\nd     " Create a new folder\nD     " Delete\nR     " Rename',
+      },
+      {
+        id: 'help-system',
+        title: 'Help System',
+        description: 'Learn more inside Vim itself:',
+        language: 'vim',
+        code: ':help               " Open help\n:help {topic}       " Help on a topic (:help dw, :help :s)\n:help index         " List of all commands\n:help user-manual   " The full user manual\nCtrl+]              " Follow a help link\nCtrl+t              " Go back from a help link\n:helpgrep {pattern} " Search all of the help\n:q                  " Close the help window',
+      },
+      {
+        id: 'common-patterns',
+        title: 'Common Patterns',
+        description: 'Frequently used workflows:',
+        language: 'vim',
+        code: '" Change a word and repeat it elsewhere\nciw  newword  Esc " Change the word under the cursor\nn                 " Go to the next match\n.                 " Repeat the change\n\n" Replace a word everywhere (quick way)\n*              " Search for the word under the cursor\n:%s//newword/g " Empty pattern reuses the last search\n\n" Delete everything inside quotes or brackets\ndi"      di(      di{      dit\n\n" Copy a line and paste it below\nyyp\n\n" Move a line up or down\nddp   " Move down\nddkP  " Move up\n:m +1 " Move down (command form)\n:m -2 " Move up\n\n" Duplicate a line\n:t.\n\n" Comment out several lines (visual block)\nCtrl+v   select lines   I  #  Esc\n\n" Delete all lines containing a word\n:g/word/d\n\n" Make a quick edit and save without leaving Insert mode\nCtrl+o  :w  Enter\n\n" Sort selected lines\n:\'<,\'>sort\n\n" Count matches of a word\n:%s/word//gn\n\n" Open the file under the cursor\ngf\n\n" Reformat a paragraph to fit the line width\ngqap\n\n" Increase or decrease a number under the cursor\nCtrl+a      Ctrl+x\n10 Ctrl+a                  " Add 10',
+      },
+      {
+        id: 'quick-cheat-sheet',
+        title: 'Quick Cheat Sheet',
+        description: 'The most important keys to memorize first:',
+        language: 'vim',
+        code: 'Esc          Back to Normal mode\ni / a        Start typing (before / after the cursor)\no / O        New line below / above\nh j k l      Move left, down, up, right\nw / b        Next / previous word\n0 / $        Start / end of line\ngg / G       Top / bottom of file\ndd           Delete line\nyy / p       Copy line / paste\nu / Ctrl+r   Undo / redo\n.            Repeat last change\n/text        Search\n:%s/a/b/g    Replace all\n:w           Save\n:q           Quit\n:wq          Save and quit\n:q!          Quit without saving',
       },
     ],
   },
@@ -10979,4 +11370,6 @@ export const refNavItems = [
   { lang: 'turbo', label: 'Turbo' },
   { lang: 'htmx', label: 'HTMX' },
   { lang: 'yaml', label: 'YAML' },
+  { lang: 'bash', label: 'Bash' },
+  { lang: 'vim', label: 'Vim' },
 ]
