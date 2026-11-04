@@ -390,6 +390,14 @@ const languages = [
     badge: 'Tool',
     desc: 'Powerful, keyboard-driven modal text editor.',
   },
+  {
+    lang: 'sqlite',
+    label: 'SQLite',
+    icon: '/sqlite-svgrepo-com.svg',
+    color: '#0F80CC',
+    badge: 'Database',
+    desc: 'Lightweight, serverless, file-based SQL database engine.',
+  },
 ]
 
 const categoryCounts = languages.reduce(
@@ -453,7 +461,9 @@ const scrollRight = () => {
         >
           New
         </span>
-        <span class="text-neutral-200">New cheatsheets just landed:</span>
+        <span class="text-neutral-200"
+          >{{ newItems.length > 1 ? 'New cheatsheets' : 'New cheatsheet' }} just landed:</span
+        >
         <span class="flex items-center gap-2">
           <RouterLink
             v-for="item in newItems"
