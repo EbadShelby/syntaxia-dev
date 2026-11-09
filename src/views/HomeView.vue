@@ -398,6 +398,14 @@ const languages = [
     badge: 'Database',
     desc: 'Lightweight, serverless, file-based SQL database engine.',
   },
+  {
+    lang: 'mermaid',
+    label: 'Mermaid',
+    icon: '/Mermaid_dark.svg',
+    color: '#FF3670',
+    badge: 'Tool',
+    desc: 'Create diagrams and flowcharts from simple text definitions.',
+  },
 ]
 
 const categoryCounts = languages.reduce(

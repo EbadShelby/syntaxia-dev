@@ -202,6 +202,7 @@ async function highlight() {
     'powershell',
     'cmd',
     'vim',
+    'mermaid',
   ]
 
   if (!supported.includes(lang)) {

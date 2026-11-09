@@ -5,8 +5,8 @@ import { ref, computed } from 'vue'
 // Per user: a "New" mark disappears once that cheatsheet is opened (from the
 // home page or by visiting its page directly), and all marks expire
 // NEW_DURATION_MS after the user first saw them.
-export const newLangs = ['sqlite']
-const announcementId = 'new-cheatsheets-2026-11-04'
+export const newLangs = ['mermaid']
+const announcementId = 'new-cheatsheets-2026-11-10'
 const NEW_DURATION_MS = 7 * 24 * 60 * 60 * 1000
 
 const keyPrefix = `syntaxia:${announcementId}`
